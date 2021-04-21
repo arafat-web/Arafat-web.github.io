@@ -60,9 +60,16 @@
 }
 .top-font{
     font-family: 'Merriweather', serif;
+    color: #00B4D9;
 }
 @media screen and (max-width: 768px) {
     .text-affect{
         font-size: 17px;
     }
+}
+
+.container .image-container {
+  margin-left: 2rem;
+  margin-right: 1rem;
+  margin-top: 10rem;
 }

@@ -744,15 +744,17 @@ a.back-to-top:focus {
 
 #hero-area .contents {
   padding: 175px 0px 120px;
+  text-align: left;
 }
 
 #hero-area .contents h5 {
   font-size: 50px;
+  color: #000;
 }
 
 #hero-area .contents .head-title {
-  color: #fff;
-  font-size: 80px;
+  color: black;
+  font-size: 50px;
   letter-spacing: 10px;
   text-transform: uppercase;
   font-weight: 700;
@@ -760,7 +762,7 @@ a.back-to-top:focus {
 
 #hero-area .contents p {
   font-size: 30px;
-  color: #fff;
+  color: black;
   font-weight: 400;
   line-height: 30px;
   margin-bottom: 25px;
