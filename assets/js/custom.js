@@ -25,4 +25,5 @@ $(document).ready(function () {
             typeSpeed: 80
         });
     });
+
 })

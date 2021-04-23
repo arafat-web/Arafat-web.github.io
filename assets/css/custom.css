@@ -2,71 +2,70 @@
   Author: Arafat Hossain Ar
   Date: 07 - 01 - 2021
 */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
 .loader_bg {
-    position: fixed;
-    z-index: 9999999;
-    background: #fff;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .loader {
-    border: 0 solid transparent;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    top: calc(50vh - 75px);
-    left: calc(50vw - 75px);
-  }
-  
-  .loader:before,
-  .loader:after {
-    content: '';
-    border: 1em solid #00B4D9;
-    border-radius: 50%;
-    width: inherit;
-    height: inherit;
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: loader 2s linear infinite;
+  position: fixed;
+  z-index: 9999999;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.loader {
+  border: 0 solid transparent;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: calc(50vh - 75px);
+  left: calc(50vw - 75px);
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  border: 1em solid #00b4d9;
+  border-radius: 50%;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: loader 2s linear infinite;
+  opacity: 0;
+}
+
+.loader:before {
+  animation-delay: 0.5s;
+}
+
+@keyframes loader {
+  0% {
+    transform: scale(0);
     opacity: 0;
   }
-  
-  .loader:before {
-    animation-delay: .5s;
+
+  50% {
+    opacity: 1;
   }
-  
-  @keyframes loader {
-    0% {
-        transform: scale(0);
-        opacity: 0;
-    }
-  
-    50% {
-        opacity: 1;
-    }
-  
-    100% {
-        transform: scale(1);
-        opacity: 0;
-    }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
   }
-.text-affect{
-    font-size: 25px;
-    display: inline;
 }
-.top-font{
-    font-family: 'Merriweather', serif;
-    color: #11d2f8;
+.text-affect {
+  font-size: 25px;
+  display: inline;
+}
+.top-font {
+  font-family: "Merriweather", serif;
+  color: #11d2f8;
 }
 @media screen and (max-width: 768px) {
-    .text-affect{
-        font-size: 17px;
-    }
-
+  .text-affect {
+    font-size: 17px;
+  }
 }
 
 .container .image-container {
@@ -76,6 +75,191 @@
 }
 @media screen and (max-width: 1000px) {
   .container .image-container {
-   display: none;
+    display: none;
   }
+}
+
+/*EXPERTIES STYLE*/
+
+/* .container.experties {
+  padding-top: 30px;
+}
+
+.skill {
+  width:95%;
+  position: relative;
+  line-height: 2em;
+}
+
+.skill-bar li {
+    margin-bottom: 70px;
+    background: #000;
+    height: 10px;
+    border-radius: 3px;
+    border-left: 1px solid #111;
+    border-top: 1px solid #111;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    width: 100.5%;
+    text-transform: uppercase;
+}
+
+.skill-bar li em {
+    position: relative;
+    top: -30px;
+    font-style: normal;
+}
+
+.percentage {
+    height: 5px;
+    margin: 2px 1px;
+    background: #2187e7;
+    position: absolute;
+    box-shadow: 0px 0px 10px 1px rgba(0,198,255,0.4);
+}
+
+.percentage:before,
+.percentage:after {
+  content: "";
+  position: absolute;
+  right: -3px;
+  top: -10px;
+}
+
+.percentage:before {
+  content: attr(data-value);
+  right: -20px;
+  top: -35px;
+  padding: 0px 5px;
+}
+
+.percentage:after {
+  border-top: 4px solid #008ED6;
+  border-left: 4px solid rgba(0,0,0,0);
+  border-right: 4px solid rgba(0,0,0,0);  
+} */
+.skills {
+  color: white;
+}
+.skill-bars {
+  padding: 25px 30px;
+  width: 100%;
+  background: #161616;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.skill-bars .bar {
+  margin: 20px 0;
+}
+.skill-bars .bar:first-child {
+  margin-top: 0px;
+}
+.skill-bars .bar .info {
+  margin-bottom: 5px;
+}
+.skill-bars .bar .info span {
+  font-weight: 500;
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 2s 1s linear forwards;
+}
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+.skill-bars .bar .progress-line {
+  height: 10px;
+  width: 100%;
+  background: #000;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 3px;
+  border-left: 1px solid #111;
+  border-top: 1px solid #111;
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+.bar .progress-line span {
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #2187e7;
+  box-shadow: 0px 0px 10px 1px rgba(0,198,255,0.4);
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+.bar .progress-line.html span {
+  width: 90%;
+}
+.bar .progress-line.css span {
+  width: 60%;
+}
+.bar .progress-line.jquery span {
+  width: 85%;
+}
+.bar .progress-line.python span {
+  width: 50%;
+}
+.bar .progress-line.mysql span {
+  width: 75%;
+}
+.progress-line span::before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+.progress-line span::after {
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+  100% {
+    opacity: 1;
+  }
+}
+.progress-line.html span::after {
+  content: "90%";
+}
+.progress-line.css span::after {
+  content: "60%";
+}
+.progress-line.jquery span::after {
+  content: "85%";
+}
+.progress-line.python span::after {
+  content: "50%";
+}
+.progress-line.mysql span::after {
+  content: "75%";
+}
+.dark {
+  background-color: #161616;
 }
