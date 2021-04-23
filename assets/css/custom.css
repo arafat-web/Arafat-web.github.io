@@ -74,3 +74,8 @@
   margin-right: 1rem;
   margin-top: 10rem;
 }
+@media screen and (max-width: 1000px) {
+  .container .image-container {
+   display: none;
+  }
+}
