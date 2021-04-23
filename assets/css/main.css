@@ -722,8 +722,9 @@ a.back-to-top:focus {
 3. Hero Area
 ========================================================================== */
 .hero-area-bg {
-  background: url(../img/hero-area.jpg) no-repeat;
+  background: url(../img/bg_hero.svg) no-repeat;
   background-size: cover;
+  height: 100%;
 }
 
 #hero-area {
@@ -747,11 +748,23 @@ a.back-to-top:focus {
   text-align: left;
 }
 
+
+@media screen and (max-width: 1000px) {
+  #hero-area .contents {
+    padding: 175px 0px 120px;
+    text-align: center;
+  }
+  .hero-area-bg {
+    background: url(../img/bg_hero.svg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100wh;
+  }
+}
 #hero-area .contents h5 {
   font-size: 50px;
   color: #000;
 }
-
 #hero-area .contents .head-title {
   color: black;
   font-size: 50px;
