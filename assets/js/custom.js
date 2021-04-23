@@ -20,7 +20,7 @@ $(document).ready(function () {
     var element = $(".text-affect");
     $(function () {
         element.typed({
-            strings: ["Java Programmer  ", "Web App Developer ", "Desktop App Developer"],
+            strings: ["Java Programmer  ", "Web Developer ", "Desktop App Developer"],
             loop: true,
             typeSpeed: 80
         });
