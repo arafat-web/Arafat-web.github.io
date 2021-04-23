@@ -79,65 +79,6 @@
   }
 }
 
-/*EXPERTIES STYLE*/
-
-/* .container.experties {
-  padding-top: 30px;
-}
-
-.skill {
-  width:95%;
-  position: relative;
-  line-height: 2em;
-}
-
-.skill-bar li {
-    margin-bottom: 70px;
-    background: #000;
-    height: 10px;
-    border-radius: 3px;
-    border-left: 1px solid #111;
-    border-top: 1px solid #111;
-    border-right: 1px solid #333;
-    border-bottom: 1px solid #333;
-    width: 100.5%;
-    text-transform: uppercase;
-}
-
-.skill-bar li em {
-    position: relative;
-    top: -30px;
-    font-style: normal;
-}
-
-.percentage {
-    height: 5px;
-    margin: 2px 1px;
-    background: #2187e7;
-    position: absolute;
-    box-shadow: 0px 0px 10px 1px rgba(0,198,255,0.4);
-}
-
-.percentage:before,
-.percentage:after {
-  content: "";
-  position: absolute;
-  right: -3px;
-  top: -10px;
-}
-
-.percentage:before {
-  content: attr(data-value);
-  right: -20px;
-  top: -35px;
-  padding: 0px 5px;
-}
-
-.percentage:after {
-  border-top: 4px solid #008ED6;
-  border-left: 4px solid rgba(0,0,0,0);
-  border-right: 4px solid rgba(0,0,0,0);  
-} */
 .skills {
   color: white;
 }
