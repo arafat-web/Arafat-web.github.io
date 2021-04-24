@@ -143,17 +143,36 @@
   width: 90%;
 }
 .bar .progress-line.css span {
-  width: 60%;
+  width: 90%;
 }
 .bar .progress-line.jquery span {
   width: 85%;
 }
-.bar .progress-line.python span {
-  width: 50%;
+.bar .progress-line.javascript span {
+  width: 80%;
+}
+.bar .progress-line.java span {
+  width: 90%;
+}
+.bar .progress-line.c span {
+  width: 70%;
+}
+.bar .progress-line.sql span {
+  width: 90%;
 }
 .bar .progress-line.mysql span {
+  width: 80%;
+}
+.bar .progress-line.git span {
+  width: 80%;
+}
+.bar .progress-line.ps span {
   width: 75%;
 }
+.bar .progress-line.li span {
+  width: 70%;
+}
+
 .progress-line span::before {
   position: absolute;
   content: "";
@@ -190,16 +209,35 @@
   content: "90%";
 }
 .progress-line.css span::after {
-  content: "60%";
+  content: "90%";
 }
 .progress-line.jquery span::after {
   content: "85%";
 }
-.progress-line.python span::after {
-  content: "50%";
+.progress-line.javascript span::after {
+  content: "80%";
+}
+.progress-line.java span::after {
+  content: "90%";
+}
+
+.progress-line.c span::after {
+  content: "70%";
+}
+.progress-line.sql span::after {
+  content: "90%";
 }
 .progress-line.mysql span::after {
+  content: "80%";
+}
+.progress-line.git span::after {
+  content: "80%";
+}
+.progress-line.ps span::after {
   content: "75%";
+}
+.progress-line.li span::after {
+  content: "70%";
 }
 .dark {
   background-color: #161616;
