@@ -86,8 +86,8 @@
   padding: 25px 30px;
   width: 100%;
   background: #161616;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+  /* box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px; */
 }
 .skill-bars .bar {
   margin: 20px 0;
@@ -241,4 +241,7 @@
 }
 .dark {
   background-color: #161616;
+}
+.info span{
+  color: #fff;
 }
