@@ -34,6 +34,8 @@
   <link rel="stylesheet" type="text/css" href="assets/css/main.css">
   <!-- Responsive Style -->
   <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+  <!-- Github Repo -->
+  <link rel="stylesheet" type="text/css" href="assets/css/repos.css">
   <!-- Custom Style  -->
   <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
 </head>
@@ -142,7 +144,14 @@
               <h5 class="top-font wow fadeInUp" data-wow-delay="0.2s">Hi! This is</h5>
               <h2 class="head-title wow fadeInUp" data-wow-delay="0.4s">Arafat Hossain</h2>
               <!-- <p class="script-font wow fadeInUp" data-wow-delay="0.6s"> <div class="text-affect"></div></p> -->
-              <div class="top-font wow fadeInUp text-affect" data-wow-delay="0.6s"></div>
+              <!-- <div class="top-font wow fadeInUp text-affect" data-wow-delay="0.6s"></div> -->
+              <div class="animate-typing top-font wow fadeInUp text-affect" data-wow-delay="0.6s"
+                data-animate-loop="true" data-type-speed="80" data-type-delay="200" data-remove-speed="80"
+                data-remove-delay="500" data-cursor-speed="200">
+                Java Programmer|
+                Web Developer|
+                Desktop App Developer|
+              </div>
               <ul class="social-icon wow fadeInUp" data-wow-delay="0.8s">
                 <li>
                   <a class="facebook" href="https://facebook.com/arafathossain000" target="_blank"><i
@@ -287,8 +296,8 @@
   <!-- Services Section End -->
 
   <!-- Skill Section  -->
-  <section id="skills" class="services section-padding dark">
-    <h2 class="skills section-title text-center wow flipInX" data-wow-delay="0.4s">My Skills</h2>
+  <section id="skills" class=" section-padding dark">
+    <h2 class="skills section-title text-center wow flipInX" data-wow-delay="0.6s">My Skills</h2>
     <div class="container">
       <div class="row wow fadeInDown" data-wow-delay="0.3s">
 
@@ -342,7 +351,7 @@
                 <span></span>
               </div>
             </div>
-            
+
           </div>
         </div>
 
@@ -390,12 +399,23 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
   <!-- Skill Section end  -->
 
+  <!-- My Projects Start -->
+  <section class="git-repo services section-padding">
+    <h2 class="section-title wow flipInX" data-wow-delay="0.8s">My Projects</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-lg-12">
+        <div class="repos"></div>
+      </div>
+  </section>
+
+
+  <!-- My Projects End -->
   <!-- Resume Section Start -->
   <div id="resume" class="section-padding">
     <div class="container">
@@ -609,46 +629,6 @@
   </section>
   <!-- Portfolio Section Ends -->
 
-  <!-- Counter Area Start-->
-  <!-- <section class="counter-section section-padding">
-      <div class="container">
-        <div class="row">
-          Counter Item
-          <div class="col-md-3 col-sm-6 work-counter-widget text-center">
-            <div class="counter wow fadeInDown" data-wow-delay="0.3s">
-              <div class="icon"><i class="icon-briefcase"></i></div>
-              <div class="counterUp">250</div>
-              <p>Project Working</p>
-            </div>
-          </div>
-          Counter Item
-          <div class="col-md-3 col-sm-6 work-counter-widget text-center">
-            <div class="counter wow fadeInDown" data-wow-delay="0.6s">
-              <div class="icon"><i class="icon-check"></i></div>
-              <div class="counterUp">950</div>
-              <p>Project Done</p>
-            </div>
-          </div>
-          Counter Item
-          <div class="col-md-3 col-sm-6 work-counter-widget text-center">
-            <div class="counter wow fadeInDown" data-wow-delay="0.9s">
-              <div class="icon"><i class="icon-diamond"></i></div>
-              <div class="counterUp">150</div>
-              <p>Awards Received</p>
-            </div>
-          </div>
-          Counter Item
-          <div class="col-md-3 col-sm-6 work-counter-widget text-center">
-            <div class="counter wow fadeInDown" data-wow-delay="1.2s">
-              <div class="icon"><i class="icon-heart"></i></div>
-              <div class="counterUp">299</div>
-              <p>Happy Clients</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-  <!-- Counter Area End -->
 
   <!-- Contact Section Start -->
   <section id="contact" class="section-padding">
@@ -789,9 +769,10 @@
   <script src="assets/js/form-validator.min.js"></script>
   <script src="assets/js/contact-form-script.min.js"></script>
   <script src="assets/js/map.js"></script>
-  <script src="assets/js/typed.js"></script>
   <script src="assets/js/custom.js"></script>
   <script src="assets/js/starlight.js"></script>
+  <script src="assets/js/jquery.animateTyping.js"></script>
+  <script src="assets/js/jquery.repos.js"></script>
 </body>
 
 </html>

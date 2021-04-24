@@ -17,13 +17,7 @@ $(document).ready(function () {
         }
     })
 
-    var element = $(".text-affect");
-    $(function () {
-        element.typed({
-            strings: ["Java Programmer  ", "Web Developer ", "Desktop App Developer"],
-            loop: true,
-            typeSpeed: 80
-        });
-    });
+
+    $('div.repos').repos({username:'arafat-hossain-ar',count:10});
 
 })
