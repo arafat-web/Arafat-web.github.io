@@ -140,16 +140,16 @@
   animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
 .bar .progress-line.html span {
-  width: 90%;
+  width: 99%;
 }
 .bar .progress-line.css span {
-  width: 90%;
+  width: 99%;
 }
 .bar .progress-line.jquery span {
-  width: 85%;
+  width: 90%;
 }
 .bar .progress-line.javascript span {
-  width: 80%;
+  width: 90%;
 }
 .bar .progress-line.java span {
   width: 90%;
@@ -158,6 +158,9 @@
   width: 70%;
 }
 .bar .progress-line.sql span {
+  width: 90%;
+}
+.bar .progress-line.sqlite span {
   width: 90%;
 }
 .bar .progress-line.mysql span {
@@ -206,25 +209,27 @@
   }
 }
 .progress-line.html span::after {
-  content: "90%";
+  content: "99%";
 }
 .progress-line.css span::after {
-  content: "90%";
+  content: "99%";
 }
 .progress-line.jquery span::after {
-  content: "85%";
+  content: "90%";
 }
 .progress-line.javascript span::after {
-  content: "80%";
+  content: "90%";
 }
 .progress-line.java span::after {
   content: "90%";
 }
-
 .progress-line.c span::after {
   content: "70%";
 }
 .progress-line.sql span::after {
+  content: "90%";
+}
+.progress-line.sqlite span::after {
   content: "90%";
 }
 .progress-line.mysql span::after {
