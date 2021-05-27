@@ -1051,3 +1051,297 @@ a:not([href]):not([tabindex]):hover {
 #copyright p a:hover {
   color: #00b4d9;
 }
+/*
+  Author: Arafat Hossain Ar
+  Date: 07 - 01 - 2021
+*/
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+.loader_bg {
+  position: fixed;
+  z-index: 9999999;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.loader {
+  border: 0 solid transparent;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: calc(50vh - 75px);
+  left: calc(50vw - 75px);
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  border: 1em solid #00b4d9;
+  border-radius: 50%;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: loader 2s linear infinite;
+  opacity: 0;
+}
+
+.loader:before {
+  animation-delay: 0.5s;
+}
+
+@keyframes loader {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+.text-affect {
+  font-size: 25px;
+  display: inline;
+}
+.top-font {
+  font-family: "Merriweather", serif;
+  color: #11d2f8;
+  font-size: 30px;
+}
+@media screen and (max-width: 768px) {
+  .text-affect {
+    font-size: 17px;
+  }
+}
+
+.container .image-container {
+  margin-left: 2rem;
+  margin-right: 1rem;
+  margin-top: 10rem;
+}
+@media screen and (max-width: 1000px) {
+  .container .image-container {
+    display: none;
+  }
+}
+
+
+.skill-bar {
+  position: relative;
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  background: rgba(136, 136, 136, 0.986);
+  border-radius: 50px;
+}
+.title {
+  position: absolute;
+  z-index: 999;
+  width: 100px;
+  padding: 2px 0px;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+  border-radius: 50px;
+  font-family: "Merriweather", serif;
+  background: #282828;
+}
+
+.skills {
+  position: relative;
+  text-align: right;
+  padding: 2px 0px;
+  color: white;
+  width: 0px;
+  background: rgb(73, 73, 73);
+  border-radius: 50px;
+}
+
+/* Resposive Style  */
+/* only small desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  #hero-area .contents .head-title {
+    font-size: 40px;
+  }
+  .services-item .services-content h3 a {
+    font-size: 14px;
+  }
+}
+
+/* tablets */
+@media (max-width: 991px) {
+  .section-title {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  .services-item .services-content h3 a {
+    font-size: 14px;
+  }
+  .services-item {
+    margin-bottom: 20px;
+  }
+}
+
+/* only small tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+  .section-title {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+  .services-item .services-content h3 a {
+    font-size: 16px;
+  }
+  .services-item {
+    margin-bottom: 20px;
+  }
+  .counter-section .counter p {
+    font-size: 14px;
+  }
+}
+
+/* mobile or only mobile */
+@media (max-width: 767px) {
+  .section-title {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+  .section-sub {
+    font-size: 16px;
+  }
+  .navbar-brand img {
+    margin: 5px 0;
+  }
+  #hero-area .contents {
+    padding: 100px 0px 60px 0px;
+  }
+  #hero-area .contents .head-title {
+    font-size: 32px;
+  }
+  #hero-area .contents h5 {
+    font-size: 22px;
+  }
+  #hero-area .contents p {
+    font-size: 20px;
+  }
+  #about .img-thumb img {
+    border: 8px solid #fff;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    /* height: 100%; */
+  }
+  .services-item {
+    margin-bottom: 20px;
+  }
+  .timeline li .line-title {
+    line-height: 26px;
+  }
+  .timeline li:first-child i {
+    margin: -12px -40px;
+  }
+  .contact-form-area {
+    padding: 40px 0px;
+  }
+  .footer-right-area {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 400px) {
+  #hero-area .contents .head-title {
+    font-size: 25px;
+  }
+  #hero-area .contents h5 {
+    font-size: 20px;
+  }
+}
+
+/* sparkling stars */
+/*******************/
+@-webkit-keyframes comeInOut {
+  0% { transform: scale(0); }
+  50% { transform: scale(1); }
+  100% { transform: scale(0); }
+}
+@-moz-keyframes comeInOut {
+  0% { transform: scale(0); }
+  50% { transform: scale(1); }
+  100% { transform: scale(0); }
+}
+@-o-keyframes comeInOut {
+  0% { transform: scale(0); }
+  50% { transform: scale(1); }
+  100% { transform: scale(0); }
+}
+@keyframes comeInOut {
+  0% { transform: scale(0); }
+  50% { transform: scale(1); }
+  100% { transform: scale(0); }
+}
+
+@-webkit-keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(180deg); }
+}
+@-moz-keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(180deg); }
+}
+@-o-keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(180deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(180deg); }
+}
+
+.sparkling {
+  position: relative;
+  display: block;
+  z-index: 0;
+  font-weight: bold;
+  color: #FFC700 !important;
+}
+
+.sparkling > span {
+  z-index: -1;
+  position: absolute;
+  display: block;
+  animation: comeInOut 1000ms forwards;
+}
+
+.sparkling > span > svg {
+  display: block;
+  animation: spin 1000ms linear;
+}
+/* About Profile  */
+.about-profile {
+  position: relative;
+  margin: 20px 0 30px 0;
+}
+.about-profile .pro-title {
+  font-weight: 700;
+  color: #040404;
+  position: relative;
+  width: 120px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.about-profile .pro-title:after {
+  position: absolute;
+  content: ":";
+  color: #040404;
+  font-size: 14px;
+  left: 77px;
+}
+.about-profile .admin-sign {
+  position: absolute;
+  right: 45px;
+  bottom: 10px;
+}
