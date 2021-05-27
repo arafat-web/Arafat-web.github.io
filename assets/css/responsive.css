@@ -55,10 +55,10 @@
     padding: 100px 0px 60px 0px;
   }
   #hero-area .contents .head-title {
-    font-size: 22px;
+    font-size: 32px;
   }
   #hero-area .contents h5 {
-    font-size: 32px;
+    font-size: 22px;
   }
   #hero-area .contents p {
     font-size: 20px;
@@ -77,5 +77,13 @@
   }
   .footer-right-area {
     margin-top: 20px;
+  }
+}
+@media (max-width: 400px) {
+  #hero-area .contents .head-title {
+    font-size: 25px;
+  }
+  #hero-area .contents h5 {
+    font-size: 20px;
   }
 }
