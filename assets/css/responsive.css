@@ -63,6 +63,11 @@
   #hero-area .contents p {
     font-size: 20px;
   }
+  #about .img-thumb img {
+    border: 8px solid #fff;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    /* height: 100%; */
+  }
   .services-item {
     margin-bottom: 20px;
   }
