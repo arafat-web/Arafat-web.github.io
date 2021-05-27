@@ -2,10 +2,6 @@
   Author: Arafat Hossain Ar
   Date: 07 - 01 - 2021
 */
-/*
-  Author: Arafat Hossain Ar
-  Date: 07 - 01 - 2021
-*/
 
 (function($) {
   
