@@ -15,9 +15,28 @@ $(document).ready(function () {
         } else {
             $(".navbar").css({ "background-color": "transparent", "box-shadow": "none" });
         }
+
     })
 
-
-    $('div.repos').repos({username:'arafat-hossain-ar',count:10});
-
+    // function ASB() {
+    //     let k = 1;
+    //     var items = document.querySelectorAll(".skills");
+    //     items.forEach((el) => {
+    //       k = k + 0.2;
+    //       el.style.transition = `all ${k}s ease-out`;
+    //       let limit = el.textContent;
+    //       var width = 0;
+    //       var id = setInterval(frame, 0);
+    //       function frame() {
+    //         if (width >= limit) {
+    //           clearInterval(id);
+    //         } else {
+    //           width++;
+    //           el.style.width = width + "%";
+    //           el.innerHTML = width + "%";
+    //         }
+    //       }
+    //     });
+    //   }
+    //   ASB();
 })

@@ -43,15 +43,13 @@
         allowParentLinks: true,
         duplicate: true,
         label: '',
-        closedSymbol: '<i class="icon-arrow-right"></i>',
-        openedSymbol: '<i class="icon-arrow-down"></i>',
       });
 
       /* WOW Scroll Spy
     ========================================================*/
      var wow = new WOW({
       //disabled for mobile
-        mobile: false
+        mobile: true
     });
 
     wow.init();

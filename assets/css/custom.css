@@ -61,6 +61,7 @@
 .top-font {
   font-family: "Merriweather", serif;
   color: #11d2f8;
+  font-size: 30px;
 }
 @media screen and (max-width: 768px) {
   .text-affect {
@@ -86,6 +87,7 @@
   margin-bottom: 15px;
   width: 100%;
   background: rgba(136, 136, 136, 0.986);
+  border-radius: 50px;
 }
 .title {
   position: absolute;
@@ -95,6 +97,7 @@
   text-align: center;
   font-size: 14px;
   color: #ffffff;
+  border-radius: 50px;
   font-family: "Merriweather", serif;
   background: #282828;
 }
@@ -106,4 +109,5 @@
   color: white;
   width: 0px;
   background: rgb(73, 73, 73);
+  border-radius: 50px;
 }
