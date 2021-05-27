@@ -79,174 +79,31 @@
   }
 }
 
-.skills {
-  color: white;
-}
-.skill-bars {
-  padding: 25px 30px;
-  width: 100%;
-  background: #161616;
-  /* box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 10px; */
-}
-.skill-bars .bar {
-  margin: 20px 0;
-}
-.skill-bars .bar:first-child {
-  margin-top: 0px;
-}
-.skill-bars .bar .info {
-  margin-bottom: 5px;
-}
-.skill-bars .bar .info span {
-  font-weight: 500;
-  font-size: 17px;
-  opacity: 0;
-  animation: showText 2s 1s linear forwards;
-}
-@keyframes showText {
-  100% {
-    opacity: 1;
-  }
-}
-.skill-bars .bar .progress-line {
-  height: 10px;
-  width: 100%;
-  background: #000;
+
+.skill-bar {
   position: relative;
-  transform: scaleX(0);
-  transform-origin: left;
-  border-radius: 3px;
-  border-left: 1px solid #111;
-  border-top: 1px solid #111;
-  border-right: 1px solid #333;
-  border-bottom: 1px solid #333;
-
-  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  background: rgba(136, 136, 136, 0.986);
 }
-@keyframes animate {
-  100% {
-    transform: scaleX(1);
-  }
-}
-.bar .progress-line span {
-  height: 100%;
+.title {
   position: absolute;
-  border-radius: 10px;
-  transform: scaleX(0);
-  transform-origin: left;
-  background: #2187e7;
-  box-shadow: 0px 0px 10px 1px rgba(0,198,255,0.4);
-  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
-}
-.bar .progress-line.html span {
-  width: 99%;
-}
-.bar .progress-line.css span {
-  width: 99%;
-}
-.bar .progress-line.jquery span {
-  width: 90%;
-}
-.bar .progress-line.javascript span {
-  width: 90%;
-}
-.bar .progress-line.java span {
-  width: 90%;
-}
-.bar .progress-line.c span {
-  width: 70%;
-}
-.bar .progress-line.sql span {
-  width: 90%;
-}
-.bar .progress-line.sqlite span {
-  width: 90%;
-}
-.bar .progress-line.mysql span {
-  width: 80%;
-}
-.bar .progress-line.git span {
-  width: 80%;
-}
-.bar .progress-line.ps span {
-  width: 75%;
-}
-.bar .progress-line.li span {
-  width: 70%;
+  z-index: 999;
+  width: 100px;
+  padding: 2px 0px;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+  font-family: "Merriweather", serif;
+  background: #282828;
 }
 
-.progress-line span::before {
-  position: absolute;
-  content: "";
-  top: -10px;
-  right: 0;
-  height: 0;
-  width: 0;
-  border: 7px solid transparent;
-  border-bottom-width: 0px;
-  border-right-width: 0px;
-  border-top-color: #000;
-  opacity: 0;
-  animation: showText2 0.5s 1.5s linear forwards;
-}
-.progress-line span::after {
-  position: absolute;
-  top: -28px;
-  right: 0;
-  font-weight: 500;
-  background: #000;
-  color: #fff;
-  padding: 1px 8px;
-  font-size: 12px;
-  border-radius: 3px;
-  opacity: 0;
-  animation: showText2 0.5s 1.5s linear forwards;
-}
-@keyframes showText2 {
-  100% {
-    opacity: 1;
-  }
-}
-.progress-line.html span::after {
-  content: "99%";
-}
-.progress-line.css span::after {
-  content: "99%";
-}
-.progress-line.jquery span::after {
-  content: "90%";
-}
-.progress-line.javascript span::after {
-  content: "90%";
-}
-.progress-line.java span::after {
-  content: "90%";
-}
-.progress-line.c span::after {
-  content: "70%";
-}
-.progress-line.sql span::after {
-  content: "90%";
-}
-.progress-line.sqlite span::after {
-  content: "90%";
-}
-.progress-line.mysql span::after {
-  content: "80%";
-}
-.progress-line.git span::after {
-  content: "80%";
-}
-.progress-line.ps span::after {
-  content: "75%";
-}
-.progress-line.li span::after {
-  content: "70%";
-}
-.dark {
-  background-color: #161616;
-}
-.info span{
-  color: #fff;
+.skills {
+  position: relative;
+  text-align: right;
+  padding: 2px 0px;
+  color: white;
+  width: 0px;
+  background: rgb(73, 73, 73);
 }
