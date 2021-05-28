@@ -604,7 +604,7 @@ a.back-to-top:focus {
 3. Hero Area
 ========================================================================== */
 .hero-area-bg {
-  background: url(../img/bg_hero.svg) no-repeat;
+  background: url(../img/background/bg_hero.svg) no-repeat;
   background-size: cover;
   height: 100%;
 }

@@ -29,8 +29,12 @@
     $(window).on('scroll', function() {
         if ($(window).scrollTop() > 200) {
             $('.scrolling-navbar').addClass('top-nav-collapse');
+            $('#logo-1').show();
+            $('#logo-2').hide();
         } else {
             $('.scrolling-navbar').removeClass('top-nav-collapse');
+            $('#logo-2').show();
+            $('#logo-1').hide();
         }
     });
 
