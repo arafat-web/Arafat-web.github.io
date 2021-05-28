@@ -632,7 +632,9 @@
                     class="icon-social-github"></i></a>
               </li>
             </ul>
-            <p>Copyright © 2021 All Right Reserved by Arafat</p>
+            <hr>
+            <p>Copyright © 2021 <br> All Right Reserved by <a href="https://facebook.com/arafathossain000">Arafat</a> </p>
+            <p id="count">Total Visits: <span id="visits"></span></p>
           </div>
         </div>
       </div>
@@ -644,7 +646,12 @@
   <a href="#" class="back-to-top">
     <i class="icon-arrow-up"></i>
   </a>
-
+  <script>
+    function cb(response) {
+        document.getElementById('visits').innerText = response.value;
+    }
+    </script>
+    <script async src="https://api.countapi.xyz/hit/arafat-web.github.io/visits?callback=cb"></script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="assets/js/jquery-min.js"></script>
   <script src="assets/js/popper.min.js"></script>
