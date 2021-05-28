@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Speed Typer</title>
+</head>
+
+<body>
+  <div class="main">
+    <div class="menu-area">
+      <div class="container">
+        <center>
+          <h2>Speed Typer</h2>
+          <button onclick="startGame()" class="menu-btn">Start Game</button>
+          <!-- <button onclick="startLevel()" class="menu-btn">Level</button> -->
+          <button onclick="startAbout()" class="menu-btn">About</button>
+          <button onclick="this.parentElement.style.display='none'" class="menu-btn">
+            Exit
+          </button>
+          <div class="footer"><span> &copy;2020</span><span>Arafat Hossain Ar</span> </div>
+        </center>
+      </div>
+    </div>
+
+    <div class="game-area">
+      <div class="container">
+        <center>
+          <h2>Speed Typer</h2>
+          <div style="text-align: left;" class="time-left col">
+            Time: <span id="time">10s</span>
+          </div>
+          <div style="text-align: right;" class="score-area col">
+            Score: <span id="score">0</span>
+          </div>
+          <small>Type the following word:</small>
+          <h1 id="word">sololearn</h1>
+          <input type="text" id="input" autocomplete="off" placeholder="Type the word here..." />
+          <button onclick="resetButton()" class="back col">Restart</button>
+          <button onclick="levelTwo()" class="back col2">Next Level</button>
+      </div>
+      </center>
+    </div>
+
+    <!-- <div class="level-area">
+        <div class="container">
+          <center>
+          <h2>👩‍💻 Select Level 👨‍💻</h2>
+          <button onclick="levelOne()" class="menu-btn">Level One</button>
+          <button onclick="levelTwo()" class="menu-btn">Level Two</button>
+          <button class="menu-btn">Level Three</button>
+          <button onclick="backButton()" class="back">Back</button>
+        </center>
+        </div>
+      </div> -->
+
+    <div class="about-area">
+      <div class="container">
+        <center>
+          <h2 style="font-size: 20px;">About Game</h2>
+          <p>
+            <h3>Name: Speed Typer</h3>
+            <h3>Version: 1.0</h3>
+            <h3>Creator: Arafat</h3>
+          </p>
+          <h3 style="font-size: 20px;">Instruction</h3><hr width="200px">
+          <p class="ins">
+             Simply type the word on the input box to score. You'll get 15 seconds and for each right answer will get 3+ seconds. <br>Let's see your typing skill.
+          </p>
+          <button onclick="backButton()" class="back">Back</button>
+        </center>
+      </div>
+    </div>
+    <div class="game-over">
+      <div class="container">
+        <center>
+          <h2>‍ Game Over</h2>
+          <h3 class="final-score">&#128546;<br> Your Score <span id="finalscore"></span></h3>
+          <button onclick="tryAgain()" class="back">Try Again</button>
+        </center>
+      </div>
+    </div>
+  </div>
+  <div id="toast"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>

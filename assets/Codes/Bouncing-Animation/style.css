@@ -1,0 +1,29 @@
+body,
+html {
+  margin: 0 auto; 
+  background: radial-gradient(
+      circle at 50% 30%,
+      rgba(209, 209, 209, 0.04) 0%,
+      rgba(209, 209, 209, 0.04) 50%,
+      rgba(138, 138, 138, 0.04) 50%,
+      rgba(138, 138, 138, 0.04) 100%
+    ),
+    radial-gradient(
+      circle at 9% 40%,
+      rgba(209, 209, 209, 0.04) 0%,
+      rgba(209, 209, 209, 0.04) 50%,
+      rgba(71, 71, 71, 0.04) 50%,
+      rgba(71, 71, 71, 0.04) 100%
+    ),
+    radial-gradient(
+      circle at 84% 81%,
+      rgba(147, 147, 147, 0.04) 0%,
+      rgba(147, 147, 147, 0.04) 50%,
+      rgba(253, 253, 253, 0.04) 50%,
+      rgba(253, 253, 253, 0.04) 100%
+    ),
+    linear-gradient(266deg, rgb(5, 73, 170), rgb(140, 100, 243));
+}
+canvas {
+  opacity: 0.4;
+}

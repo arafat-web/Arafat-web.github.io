@@ -1,0 +1,425 @@
+/* ----------------------------------------------
+ * Name: Number Puzzle
+ * Type: Brain Game
+ * Author: Arafat Hossain Ar 
+ * Date: 9/6/2020
+ * ---------------------------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Amaranth&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Neuton:wght@700&display=swap");
+html {
+  margin: 0 auto;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #2c3e50;
+}
+main {
+  display: block;
+}
+#load {
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+  position: absolute;
+  top: calc(25vh);
+  left: calc(40vw);
+  max-width: 600px;
+}
+
+.text {
+  padding: 0;
+  margin-left: 50px;
+  margin-top: 0;
+  font-family: "Neuton", serif;
+  animation: blinkingText 1s infinite;
+  text-shadow: 3px 3px 1px gray;
+  max-width: 600px;
+}
+@keyframes load {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.6);
+  }
+}
+.load div {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 13.333333333333336px;
+  left: 13.333333333333336px;
+  border-radius: 10px;
+  background-color: rgba(52, 73, 94, 1);
+  box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.3);
+  animation: load 1s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  animation-delay: -0.3s;
+}
+.load div:nth-child(2) {
+  top: 13.333333333333336px;
+  left: 106.66666666666666px;
+  border-radius: 10px;
+  background-color: rgba(52, 73, 94, 1);
+  box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.3);
+  animation-delay: -0.2s;
+}
+.load div:nth-child(3) {
+  top: 106.66666666666666px;
+  left: 13.333333333333336px;
+  border-radius: 10px;
+  background-color: rgba(52, 73, 94, 1);
+  box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.3);
+  animation-delay: 0s;
+}
+.load div:nth-child(4) {
+  top: 106.66666666666666px;
+  left: 106.66666666666666px;
+  border-radius: 10px;
+  background-color: rgba(52, 73, 94, 1);
+  box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.3);
+  animation-delay: -0.1s;
+}
+.spinner-cube {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  overflow: hidden;
+}
+.load {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+  max-width: 600px;
+}
+.load div {
+  box-sizing: content-box;
+}
+#main {
+  display: none;
+  background-color: rgba(52, 73, 94, 0.329);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+@media only screen and (max-width: 400px) {
+  #load {
+
+    left: calc(10vw);
+   
+  }
+  .yesno{
+    margin-top: 100%;
+  }
+  .exit{
+    margin-top:  40%;
+  }
+}
+.mainMenu {
+  height: 100%;
+  display: block;
+  padding: 20px;
+}
+.grid-container {
+  display: grid;
+  grid-gap: 10px 10px;
+  justify-content: center;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+#backButton {
+  padding: 5px;
+  width: 100px;
+}
+#resetButton {
+  padding: 5px;
+  width: 200px;
+}
+#lvlname {
+  font-size: 40px;
+}
+.grid-item {
+  padding: 10px;
+  width: 200px;
+  grid-column-start: 5;
+  grid-column-end: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+.lvlbtn {
+  width: 70px;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+button {
+  font-size: 25px;
+  color: #fff;
+  border-radius: 10px;
+  background-color: rgba(52, 73, 94, 1);
+  box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.3);
+  font-family: "Amaranth", sans-serif;
+  font-weight: 700;
+  border: 1px solid black;
+  text-shadow: 3px 3px 1px gray;
+  transition: all 0.15s linear 0s;
+}
+button:focus {
+  outline: none;
+}
+button:hover {
+  opacity: 0.5;
+  box-shadow: -2px 2px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s;
+}
+.container {
+  background-color: rgba(52, 73, 94, 0.6);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 40px;
+  font-family: "Neuton", serif;
+  margin-bottom: 30px;
+  margin-top: 0px;
+  animation: blinkingText 1.2s infinite;
+  text-shadow: 3px 3px 1px gray;
+}
+@keyframes blinkingText {
+  0% {
+    text-shadow: 3px 3px 5px rgb(230, 230, 230);
+  }
+  50% {
+    text-shadow: 3px 3px 5px rgb(180, 170, 170);
+  }
+  100% {
+    text-shadow: 3px 3px 5px rgb(255, 231, 231);
+  }
+}
+.footer {
+  display: block;
+}
+h3 {
+  text-align: center;
+  color: #fff;
+  font-family: "Neuton", serif;
+}
+#level {
+  display: none;
+  transition: all 0.15s linear 0s;
+  padding: 20px;
+}
+.level-area {
+  padding: 0%;
+}
+#about {
+  display: none;
+  transition: all 0.15s linear 0s;
+  padding: 20px;
+}
+.about-s {
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  font-family: "Neuton", serif;
+}
+h4 {
+  margin: 0;
+  font-size: 25px;
+}
+.gameplay {
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  font-family: "Neuton", serif;
+}
+#instruction {
+  display: none;
+  transition: all 0.15s linear 0s;
+  padding: 20px;
+}
+#lvl {
+  display: none;
+  padding: 20px;
+}
+.movement {
+  display: block;
+  padding-bottom: 20px;
+}
+.movement strong {
+  float: left;
+  width: 50%;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-family: "Amaranth", sans-serif;
+}
+.movement b {
+  float: right;
+  width: 50%;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: right;
+  font-family: "Amaranth", sans-serif;
+}
+.leveldesign {
+  margin-bottom: 20px;
+}
+hr {
+  margin: auto;
+  border-color: rgb(201, 197, 191);
+}
+.leveldesign button {
+  width: 80px;
+  padding: 15px;
+  font-size: 30px;
+  animation: blinking 2s infinite;
+}
+@keyframes blinking {
+  0% {
+    text-shadow: 1px 1px 1px rgb(230, 230, 230);
+  }
+  25% {
+    text-shadow: 1px 1px 1px rgb(230, 230, 230);
+  }
+  50% {
+    text-shadow: 1px 2px 5px rgb(255, 231, 231);
+  }
+  75% {
+    text-shadow: 1px 1px 1px rgb(230, 230, 230);
+  }
+  100% {
+    text-shadow: 1px 2px 5px rgb(255, 231, 231);
+  }
+}
+.leveldesign button:hover {
+  opacity: 1;
+  box-shadow: -1px 1px 0px rgba(0, 0, 0, 0.3);
+}
+.winner {
+  display: none;
+}
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(52, 73, 94, 0.9);
+  padding: 0px;
+}
+.top {
+  top: 20%;
+  position: relative;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.win_again,
+.next_level {
+  float: left;
+  width: 100%;
+}
+
+#over {
+  display: none;
+}
+#congo {
+  display: none;
+  text-align: center;
+}
+.winner b {
+  color: #fff;
+  font-size: 25px;
+  display: block;
+  text-align: center;
+}
+#sad {
+  font-size: 50px;
+  display: block;
+  text-align: center;
+}
+#nextLvl {
+  display: none;
+}
+#congo span {
+  display: inline-block;
+  width: 30px;
+  font-size: 30px;
+  text-align: center;
+}
+#trp {
+  display: block;
+  font-size: 50px;
+}
+#star1.fill:before {
+  content: "\2605";
+  position: absolute;
+  color: gold;
+}
+#star2.fill:before {
+  content: "\2605";
+  position: absolute;
+  color: gold;
+}
+#star3.fill:before {
+  content: "\2605";
+  position: absolute;
+  color: gold;
+}
+#star4.fill:before {
+  content: "\2605";
+  position: absolute;
+  color: gold;
+}
+#star5.fill:before {
+  content: "\2605";
+  position: absolute;
+  color: gold;
+}
+img {
+  width: 100%;
+}
+#sound{
+  display: none;
+  max-width: 600px;
+}
+.yesno{
+  margin-top: 80%;
+  font-family: "Amaranth", sans-serif;
+}
+#sound h5{
+  text-align: center;
+  font-size: 25px;
+  color: #fff;
+  font-family: "Amaranth", sans-serif;
+
+}
+#exit{
+  display: none;
+  max-width: 600px;
+
+}
+.exit{
+text-align: center;
+color: #fff;
+font-size: 40px;
+font-family: "Neuton", serif;
+margin-top: 30%;
+animation: blinkingText .5s infinite;
+text-shadow: 3px 3px 1px gray;
+}

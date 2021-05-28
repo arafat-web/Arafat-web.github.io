@@ -1,0 +1,332 @@
+<!----------------------------------------------
+* Name: Number Puzzle
+* Type: Brain Game
+* Author: Arafat Hossain Ar 
+* Date: 9/6/2020
+* ---------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Puzzle Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main>
+      <section id="load">
+        <div class="spinner-cube">
+          <div class="load">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <p class="text">Loading....</p>
+      </section>
+      <section id="sound">
+        <div class="container">
+          <div class="header">
+            <h5>Play Background Music</h5>
+          </div>
+          <div class="yesno">
+            <button onclick="soundTrue()">Yes</button>
+            <button style="float: right" onclick="soundFalse()">No</button>
+          </div>
+        </div>
+      </section>
+      <section id="main">
+        <!---------- main menu  -------->
+        <div id="menu" class="mainMenu">
+          <div class="container">
+            <div class="header">
+              <h1>
+                Number Puzzle
+                <hr />
+                <hr style="width: 70%; margin-top: 5px" />
+                <hr style="width: 50%; margin-top: 5px" />
+              </h1>
+            </div>
+            <div class="menu grid-container">
+              <button onclick="levelOne();" class="grid-item">
+                Start Game
+              </button>
+              <button onclick="Level()" class="grid-item">Level</button>
+              <button onclick="Instruction()" class="grid-item">
+                Instruction
+              </button>
+              <button onclick="About()" class="grid-item">About</button>
+              <button onclick="exitGame()" class="grid-item">Exit</button>
+            </div>
+            <div class="footer">
+              <h3>
+                &copy;2020 <br />
+                Arafat Hossain Ar
+              </h3>
+            </div>
+          </div>
+        </div>
+        <!---------- level  -------->
+        <div id="level">
+          <div class="container">
+            <div class="head">
+              <h1>
+                Select Level
+                <hr />
+              </h1>
+            </div>
+            <div class="level-area">
+              <div class="grid-container">
+                <button id="b1" onclick="levelOne()" class="lvlbtn">
+                  Level 1
+                </button>
+                <button id="b2" onclick="levelTwo()" class="lvlbtn">
+                  Level 2
+                </button>
+                <button id="b3" onclick="levelThree()" class="lvlbtn">
+                  Level 3
+                </button>
+                <button id="b4" onclick="levelFour()" class="lvlbtn">
+                  Level 4
+                </button>
+                <button id="b5" onclick="levelFive()" class="lvlbtn">
+                  Level 5
+                </button>
+                <button id="b6" onclick="levelSix()" class="lvlbtn">
+                  Level 6
+                </button>
+                <button id="b7" onclick="levelSeven()" class="lvlbtn">
+                  Level 7
+                </button>
+                <button id="b8" onclick="levelEight()" class="lvlbtn">
+                  Level 8
+                </button>
+                <button id="b9" onclick="levelNine()" class="lvlbtn">
+                  Level 9
+                </button>
+                <button id="b10" onclick="levelTen()" class="lvlbtn">
+                  Level 10
+                </button>
+                <button id="b11" onclick="levelEleven()" class="lvlbtn">
+                  Level 11
+                </button>
+                <button id="b12" onclick="levelTwelve()" class="lvlbtn">
+                  Level 12
+                </button>
+                <button id="b13" onclick="levelThirteen()" class="lvlbtn">
+                  Level 13
+                </button>
+                <button id="b14" onclick="levelFourteen()" class="lvlbtn">
+                  Level 14
+                </button>
+                <button id="b15" onclick="levelFifteen()" class="lvlbtn">
+                  Level 15
+                </button>
+              </div>
+            </div>
+            <div class="grid-container">
+              <button id="backButton" onclick="backButton()" class="grid-item">
+                Back
+              </button>
+            </div>
+            <div class="footer">
+              <h3>
+                &copy;2020 <br />
+                Arafat Hossain Ar
+              </h3>
+            </div>
+          </div>
+        </div>
+        <!---------- about  -------->
+        <div id="about">
+          <div class="container">
+            <div class="head">
+              <h1>
+                About Game
+                <hr />
+              </h1>
+              <div class="about-s">
+                <p>
+                  Author: Arafat Hossain Ar<br />
+                  Name: Number Puzzle<br />
+                  Version: 0.1<br />
+                </p>
+              </div>
+            </div>
+            <div class="about-area"></div>
+            <div class="grid-container">
+              <button id="backButton" onclick="backButton()" class="grid-item">
+                Back
+              </button>
+            </div>
+            <div class="footer">
+              <h3>
+                &copy;2020 <br />
+                Arafat Hossain Ar
+              </h3>
+            </div>
+          </div>
+        </div>
+        <!---------- instruction  -------->
+        <div id="instruction">
+          <div class="container">
+            <div class="head">
+              <h1>
+                Instruction
+                <hr />
+              </h1>
+              <div class="gameplay">
+                <p>
+                  Choose a level to start the game or Start game. You will see
+                  random numbers.(See the Picture below)
+                  <img
+                    src="https://i.ibb.co/Hrz2bMc/screencapture-127-0-0-1-5500-2020-09-06-18-38-07.png"
+                  />
+                </p>
+                <p>
+                  Complete the Puzzle before you out of moves to Win(See the
+                  picture below)
+                  <img
+                    src="https://i.ibb.co/0ZSg7CY/screencapture-127-0-0-1-5500-2020-09-06-18-39-13.png"
+                  />
+                </p>
+              </div>
+            </div>
+
+            <div class="grid-container">
+              <button id="backButton" onclick="backButton()" class="grid-item">
+                Back
+              </button>
+            </div>
+            <div class="footer">
+              <h3>
+                &copy;2020 <br />
+                Arafat Hossain Ar
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div id="lvl">
+          <div class="container">
+            <div class="head">
+              <h1 id="lvlname">
+                Level One
+                <hr />
+              </h1>
+            </div>
+            <div class="leveldesign">
+              <div class="movement">
+                <!-- <div class="clearfix"> -->
+                <strong>Moved: <span id="moved"> </span></strong>
+                <b>Moves: <span id="moves"> </span></b>
+                <!-- </div> -->
+              </div>
+              <div class="grid-container">
+                <button class="btn" id="btn1"></button>
+                <button class="btn" id="btn2"></button>
+                <button class="btn" id="btn3"></button>
+                <button class="btn" id="btn4"></button>
+                <button class="btn" id="btn5"></button>
+                <button class="btn" id="btn6"></button>
+                <button class="btn" id="btn7"></button>
+                <button class="btn" id="btn8"></button>
+                <button class="btn" id="btn9"></button>
+              </div>
+            </div>
+            <div class="grid-container">
+              <button
+                id="resetButton"
+                onclick="resetButton()"
+                class="grid-item"
+              >
+                Restart
+              </button>
+            </div>
+            <div class="grid-container">
+              <button id="backButton" onclick="backButton()" class="grid-item">
+                Back
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- winner  -->
+        <div id="winner" class="winner">
+          <div class="modal">
+            <div class="top">
+              <div style="box-shadow: none" class="container">
+                <h1 id="qoute"></h1>
+                <p id="congo">
+                  <strong id="trp">&#127942;</strong>
+
+                  <span id="star1">☆</span>
+                  <span id="star2">☆</span>
+                  <span id="star3">☆</span>
+                  <span id="star4">☆</span>
+                  <span id="star5">☆</span>
+                  <b id="lvlc">Level Completed</b>
+                </p>
+                <p id="over">
+                  <b>Oho!</b>
+                  <span id="sad"> &#128546; </span>
+                </p>
+                <div class="grid-container">
+                  <button
+                    onclick="tryAgain()"
+                    id="playAgain"
+                    class="grid-item"
+                  ></button>
+                  <button onclick="nextLevel()" id="nextLvl" class="grid-item">
+                    Next Level
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+            <!--Exit-->
+            <div id="exit">
+              <h2 class="exit">Thanks for Playing
+              <br>❤️❤️❤️❤️
+              </h2> 
+           </div>
+      <!-- Audio resources  -->
+
+      <audio id="clickClip">
+        <source
+          src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-one/multimedia_button_click_013.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
+      <audio id="clickClip2">
+        <source
+          src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-46416/zapsplat_multimedia_button_click_fast_plastic_49161.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
+      <audio id="gameoverClip">
+        <source
+          src="https://pic.pikbest.com/00/60/58/37j888piCfxy.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
+      <audio id="congratsClip">
+        <source
+          src="https://previews.customer.envatousercontent.com/files/203455285/preview.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
+      <audio id="Clip">
+        <source
+          src=" https://drive.google.com/uc?export=view&id=1JfSuH6yrtd9HBtq0u2sIU0MLOZ2xCoAC"
+          type="audio/mpeg"
+        />
+      </audio>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

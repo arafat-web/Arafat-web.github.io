@@ -1,0 +1,477 @@
+<!-- 
+  Date of Creation: 09/08/2020
+  Author: Arafat Hossain Ar
+  Label: Mobile first Web Design
+ 
+  Hello Pals! Recenlty I saw a mobile specification website
+  then thought to make another by me. This design is fully coded by me.
+  I didn't use any external library/framework even no any logo from fontawesome (only google fonts).
+  Onscroll animtion and sliders made using Vanilla Js. Truly, Vanilla JS is Awesome!
+
+
+ -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta lang="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="Author" content="Arafat Hossain Ar" />
+  <meta name="title" content="Hot 9 Play" />
+  <title>Hot 9 Play || Mobile</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- <div class="loader" id="load">
+    <div>Loading....</div>
+  </div> -->
+  <div id="main">
+    <div class="tophead">
+      <div class="brand-name"><a href="#"> Infinix</a></div>
+      <div class="search-brand">&infintie;</div>
+    </div>
+    <div id="navbar">
+      <div class="model-name nav-control">HOT 9 Play</div>
+      <div onclick="navOpenClose()" class="toggle-nav nav-control">
+        <span id="toggle-icon">&#x276E;</span>
+      </div>
+      <div class="buy-model nav-control"><a href="#">Buy Now</a></div>
+
+      <div id="collapse" class="collapse-item">
+        <div class="item"><a href="#">Overview</a></div>
+        <div class="item"><a href="#">Specs</a></div>
+        <div class="item"><a href="#"> Buy Now</a></div>
+        <div class="item"><a href="#"> More</a></div>
+      </div>
+    </div>
+    <div class="header-area">
+      <div class="slideshow">
+        <div class="slides effect">
+          <img src="https://i.ibb.co/3MfJHys/Bettery.png" />
+          <div class="text">6000 mAh Power</div>
+        </div>
+        <div class="slides effect">
+          <img src="https://i.ibb.co/7Nkd15N/display.png" />
+          <div class="text">Big Display</div>
+        </div>
+        <div class="slides effect">
+          <img src="https://i.ibb.co/4TbBW1R/bettery-life.jpg" />
+          <div class="text">Big Bettery Life</div>
+        </div>
+        <div class="slides effect">
+          <img src="https://i.ibb.co/NLr6TvD/powersaver.jpg" />
+          <div class="text">Smart Power Saver</div>
+        </div>
+      </div>
+    </div>
+    <div class="quick-view">
+      <div class="container">
+        <div class="row">
+          <div class="col-2 left-to">
+            <img class="img bg-white br-top" src="https://i.ibb.co/3MfJHys/Bettery.png" />
+            <div class="table-text">
+              <b class="d-block">6000mAh</b>
+              8.9mm SLIMMER DESIGN
+            </div>
+          </div>
+          <div class="col-2 right-to">
+            <img class="img bg-white br-top" src="https://i.ibb.co/7Nkd15N/display.png" />
+            <div class="table-text">
+              <b class="d-block">6.82" HD+</b>
+              CINEMATIC DISPLAY
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 left-to">
+            <img class="img bg-white br-top" src="https://i.ibb.co/NLr6TvD/powersaver.jpg" />
+            <div class="table-text">
+              <b class="d-block">SMART POWER SAVER</b>
+              BATTERY LAB
+            </div>
+          </div>
+          <div class="col-2 right-to">
+            <img class="img bg-white br-top" src="https://i.ibb.co/z26DBx3/cora-2.jpg" />
+            <div class="table-text">
+              <b class="d-block">8MP SELFIE CAMERA</b>
+              WITH FLASH
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 left-to">
+            <img class="img bg-white br-top" src="https://i.ibb.co/wCF3fWJ/Camera.png" />
+            <div class="table-text">
+              <b class="d-block">13MP</b>
+              AI DUAL CAMERA
+            </div>
+          </div>
+          <div class="col-2 right-to">
+            <img class="img bg-white br-top" src="https://i.ibb.co/4TbBW1R/bettery-life.jpg" />
+            <div class="table-text">
+              <b class="d-block">60%</b>
+              BATTERY'S LIFECYCLE ENHANCED
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="details-view">
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <div class="gradient-text p-20-tb">
+              6000mAh Ultra Battery For Unlimited Fun
+            </div>
+            <div class="details-text">
+              HOT 9 PLAY packs with an ultra battery capacity of 6000mAh to
+              power it. Its stylish design with only 8.90mm thickness brings
+              your unique personality to the next level despite the 6000mAh
+              ultra battery capacity. You can now truly enjoy unlimited fun
+              anytime, anywhere!
+            </div>
+            <div class="simple-text left-to">
+              <b class="d-block b-text"> 6000mAh </b> 8.90mm SLIMMER DESIGN
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-no right-to">
+        <div class="row">
+          <div class="col">
+            <div class="img-view">
+              <img class="img" src="https://i.ibb.co/3MfJHys/Bettery.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <div class="gradient-text p-20-tb">
+              Cinematic Display For Better Viewing
+            </div>
+            <div class="details-text">
+              Enjoy the mobile cinema experiences with the 6.82" larger
+              Cinematic display. The 20.5:9 full view ratio is closer to the
+              IMax movie ratio, enable you to an immersive entertainment
+              experience in movie, gaming and streaming.
+            </div>
+            <div class="simple-text left-to">
+              <b class="d-block b-text"> 6.82 HD+ </b> CINEMATIC DISPLAY
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-no right-to">
+        <div class="row">
+          <div class="col">
+            <div class="img-view">
+              <img class="img" src="https://i.ibb.co/7Nkd15N/display.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <div class="gradient-text p-20-tb">
+              Battery Lab Smart in power-saving
+            </div>
+            <div class="details-text">
+              Enjoy the longer using experiences with the help of the smart
+              power-saving system - Battery Lab. It is a unique AI power
+              optimization system that improves overall standby time by
+              approximately 15%
+            </div>
+            <div class="simple-text"></div>
+          </div>
+        </div>
+      </div>
+      <div class="container-no left-to">
+        <div class="row">
+          <div class="col">
+            <div class="img-view">
+              <img class="img" src="https://i.ibb.co/NLr6TvD/powersaver.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <div class="gradient-text p-20-tb">
+              Battery's lifecycle Enhanced
+            </div>
+            <div class="details-text">
+              We have improved the battery quality for HOT 9 Play by enhancing
+              60% battery lifecycle for a longer durability. A longer battery
+              lifecycle means lesser consumption in resources and every
+              improvement is carefully designed and made for Infinix HOT 9 Play
+              users.
+            </div>
+            <div class="simple-text left-to">
+              <b class="d-block b-text">60%</b> BATTERY'S LIFECYCLE ENHANCED
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-no left-to">
+        <div class="row">
+          <div class="col">
+            <div class="img-view">
+              <img class="img" src="https://i.ibb.co/4TbBW1R/bettery-life.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <div class="gradient-text p-20-tb">
+              A New Android Operating System
+            </div>
+            <div class="details-text">
+              Android 10 (Go Edition) comes with an improved speed and security.
+              App switching is now faster and more efficient, with apps
+              launching 10% faster than before.
+            </div>
+            <div class="simple-text left-to">
+              <img class="img" src="https://i.ibb.co/1Tht0H6/android-logo.png" style="width: 50px; display: block;" />
+              ANDROIDTM 10 Q(GO Edition)
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-no right-to">
+        <div class="row">
+          <div class="col">
+            <div class="img-view">
+              <img class="img" src="https://i.ibb.co/pLwPQws/android-version.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <div class="gradient-text p-20-tb">
+              Capture 13MP Dual Camera Portrait Images
+            </div>
+            <div class="details-text">
+              Capture portraits, landscapes, and night scenes with the 13MP AI
+              Lens camera.
+            </div>
+            <div class="simple-text left-to">
+              <b class="d-block b-text">13MP</b> AI DUAL CAMERA
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-no ">
+        <div class="row">
+          <div class="col">
+            <div class="img-view bg-cam">
+              <img class="img right-to" src="https://i.ibb.co/wCF3fWJ/Camera.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <div class="gradient-text p-20-tb">
+              8MP Selfies
+            </div>
+            <div class="details-text">
+              8MP front camera enhances images with its AI capability. It can
+              automatically adjust images in the dark to make them more bright.
+            </div>
+            <div class="simple-text left-to">
+              <b class="d-block b-text">8MP</b> SELFIE CAMERA
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="slideshow">
+              <div class="slides2 effect">
+                <img class="b-r-all" src="https://i.ibb.co/MkkqKBr/corasol-1.jpg" />
+              </div>
+              <div class="slides2 effect">
+                <img class="b-r-all" src="https://i.ibb.co/dkwX6P1/cora-3.jpg" />
+              </div>
+              <div class="slides2 effect">
+                <img class="b-r-all" src="https://i.ibb.co/XkygqsD/cora-4.jpg" />
+              </div>
+              <div class="slides2 effect">
+                <img class="b-r-all" src="https://i.ibb.co/19sCNJV/cora-5.jpg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-no bg-lock h">
+        <div class="row">
+          <div class="col-3">
+            <div class="big-text col">
+              Secure your information on your Phone
+            </div>
+            <div class="details-text col-2">
+              Secure all the your information securely in your phone via your
+              unique fingerprints or even Face ID.
+            </div>
+            <div class="simple-text col-3 left-to">
+              <img class="img" src="https://i.ibb.co/0DsbCTr/lock.png" style="width: 100px; display: block;" />
+              FINGERPRINT & FACE UNLOCK
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <div class="gradient-text p-20-tb">
+              Double SIM Capacity
+            </div>
+            <div class="details-text">
+              HOT 9 PLAY comes with the option of supporting two nano SIM-cards in its holding slot. Communicating is
+              now
+              easier, with the user having the ability to switch from one network to another.
+            </div>
+            <div class="simple-text"></div>
+          </div>
+        </div>
+      </div>
+      <div class="container-no">
+        <div class="row">
+          <div class="col">
+            <div class="img-view">
+              <img style="width: 40%; float: left; margin-top: 100px; margin-right: -5px;" class="img left-to"
+                src="https://i.ibb.co/k5W2fgj/sim-cap.png" />
+              <img style="width: 60%; float: left;" class="img right-to" src="https://i.ibb.co/GJ9vmXF/sim.jpg" />
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <div class="gradient-text p-20-tb">
+              Unique Gem Cut Texture Design
+            </div>
+            <div class="details-text">
+              HOT 9 play comes in varied colors of Quetzal Cyan, Midnight Black,
+              Violet and Ocean wave with a unique Gem Cut Texture.
+            </div>
+            <div class="simple-text left-to">
+              <img class="img" src="https://i.ibb.co/hLPV75J/gum-cut-design.png" style="width: 50px; display: block;" />
+              GEM CUT TEXTURE DESIGN
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-no">
+        <div class="row">
+          <div class="col">
+            <div class="img-view">
+              <img class="img right-to" src="https://i.ibb.co/Fg0vCDn/texture-design.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="notice-area">
+      <div class="container-no bg-dark text-white p-20-tb">
+        <div class="row">
+          <div class="col">
+            <span style="display: block;">Android is a trademark of Google LLC;</span>
+            <span style="display: block;">Product pictures are for reference only. Please refer to the actual product.
+              all
+              data are from test trials, the might differ in various circumstances.</span>
+          </div>
+        </div>
+      </div>
+      <div class="menu-area">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <button class="collapsible p-10-tb">SMARTPHONES</button>
+              <div class="content">
+                <p>
+                  <a href="#">HOT 9 Play</a>
+                  <a href="#">S5</a>
+                  <a href="#">HOT 8</a>
+                  <a href="#">S4</a>
+                  <a href="#">SMART 2 HD</a>
+                  <a href="#">View All Smartphones</a>
+                </p>
+              </div>
+              <button class="collapsible p-10-tb">ABOUT</button>
+              <div class="content">
+                <p>
+                  <a href="#">About Infinix</a>
+                  <a href="#">Contact Us</a>
+                  <a href="#"> Join Us</a>
+                </p>
+              </div>
+              <button class="collapsible p-10-tb">CARE</button>
+              <div class="content">
+                <p>
+                  <a href="#">IMEI Authentication</a>
+                  <a href="#">Product Support</a>
+                  <a href="#">Repair Center</a>
+                  <a href="#">Limited Warranty</a>
+                  <a href="#">FAQ</a>
+                </p>
+              </div>
+              <button class="collapsible p-10-tb">SHOP</button>
+              <div class="content">
+                <p>
+                  <a href="#">Find A Store</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-area ">
+        <div class="container-no bg-lightgray p-10-tb">
+          <div class="row">
+            <div class="col">
+              <span class="fb-logo"><a href="#">Facebook</a></span>
+              <span class="fb-logo"><a href="#">Youtube</a></span>
+              <span class="fb-logo"><a href="#">Instagram</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="last-footer">
+        <div class="container-no bg-gray">
+          <div class="row">
+            <div class="col">
+              <span class="fb-logo"><a href="#">Copyright © 2019 Arafat Hossain Ar</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <script>
+      function loadPage() {
+        setTimeout(showPage, 3000);
+      }
+      loadPage();
+
+      function showPage() {
+        document.getElementById("load").style.display = "none";
+        document.getElementById("main").style.display = "block";
+      }
+    </script> -->
+    <script src="script.js"></script>
+</body>
+
+</html>

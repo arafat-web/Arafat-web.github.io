@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Manager</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <main>
+    <!--    Navigation bar   -->
+    <nav>
+      <button id="defaultOpen" class="tab fa fa-user-plus" style="font-size: 30px;"
+        onclick="openTab(event, 'add')"></button>
+      <button class="tab fa fa-address-book" style="font-size: 30px;" onclick="openTab(event, 'view')"></button>
+      <button class=" tab fa fa-edit" style="font-size: 30px;" onclick="openTab(event, 'manage')"></button>
+      <button class=" tab fa fa-info-circle" style="font-size: 30px;" onclick="openTab(event, 'about')"></button>
+
+    </nav>
+    <!-- Add User -->
+    <section id="add" class="content">
+      <h2>Contact & Note Manager</h2>
+      <button onclick="openaddcon()" class="fold">
+        <hr>Add Contact
+        <hr>
+      </button>
+      <button onclick="openaddnot()" class="fold2">
+        <hr>Add Note
+        <hr>
+      </button>
+
+      <div class="popup" id="popupform">
+        <form id="my-form" class="popup-container">
+          <h3>Add Contact</h3>
+          <div class="formbox"></div>
+          <div>
+            <label for="name">First Name:</label>
+            <input type="text" onfocus="this.value=''" value="Arafat" id="firstname" required>
+          </div>
+          <div>
+            <label for="name"> Last Name:</label>
+            <input type="text" onfocus="this.value=''" value="Hossain" id="lastname">
+          </div>
+          <div>
+            <label for="name"> Mobile No:</label>
+            <input type="tel" onfocus="this.value=''" value="+8801xxxxxxxxx" id="mobile">
+          </div>
+          <div>
+            <label for="name"> Email:</label>
+            <input type="email" onfocus="this.value=''" value="Arafat@mail.com" id="email">
+          </div>
+          <div>
+            <label for="name"> Address:</label>
+            <input type="text" onfocus="this.value=''" value="Dhaka, Bangladesh" id="address">
+          </div>
+          <span onclick="newContact()" class="btn">Add</span>
+          <span onclick="closeaddcon()" class="btn">Close</span>
+        </form>
+      </div>
+      <div class="popup" id="popupnote">
+        <div class="t-container">
+          <h3>Add Note</h3>
+          <textarea class="text" id="note"></textarea>
+          <span onclick="newNote()" class="btn">Add</span>
+          <span onclick="closenote()" class="btn">Close</span>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Manager -->
+    <section id="view" class="content">
+      <h2>Contact Manager</h2>
+      <ul id="myUL">
+
+      </ul>
+    </section>
+    <!-- Note Manager -->
+    <section id="manage" class="content">
+      <h2>Note Manager</h2>
+      <div id="addtext" class="etext">
+
+      </div>
+    </section>
+    <!-- About App -->
+    <section id="about" class="content">
+      <h2>About App</h2>
+      <div class="about">
+        <h5>
+          <hr>Contact & Note Manager
+          <hr>
+        </h5>
+        <b>Version: 1.0</b>
+      </div>
+    </section>
+    <div id="toast">Fill Empty Box</div>
+    <div id="toast2">Added Successfully</div>
+    <div id="toast3">Fill Empty Box</div>
+    <div id="toast4">Added Successfully</div>
+  </main>
+  <!-- JavaScript Links -->
+  <script src="script.js"></script>
+  <script>
+    function openaddcon() {
+      document.getElementById("popupform").style.display = "block";
+    }
+    function closeaddcon() {
+      document.getElementById("popupform").style.display = "none";
+    }
+    function openaddnot() {
+      document.getElementById("popupnote").style.display = "block";
+    }
+    function closenote() {
+      document.getElementById("popupnote").style.display = "none";
+    }
+  </script>
+</body>
+
+</html>

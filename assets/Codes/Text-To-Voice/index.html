@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text to Voice</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="Author" content="Arafat Hossain Ar" />
+    <meta name="title" content="Text to Voice" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main>
+      <section>
+        <header>
+          <h1>Text to Voice</h1>
+        </header>
+        <article align="center">
+          <textarea placeholder="Type your text here...."></textarea>
+          <button onclick="speakVoice()">Speak</button>
+        </article>
+        <footer>
+          <label for="voice">Select Voice</label>
+          <select id="voice"></select>
+          <label for="volume">Volume: <b id="volumeValue"> 1 </b></label
+            ><input
+              type="range"
+              min="0"
+              max="2"
+              value="1"
+              step="0.1"
+              id="volume"
+            />
+          <label for="rate">Rate: <b id="rateValue"> 1 </b></label
+          ><input
+            type="range"
+            min="0.5"
+            max="2"
+            value="1"
+            step="0.1"
+            id="rate"
+          />
+          <label for="pitch">Pitch: <b id="pitchValue"> 1 </b></label
+          ><input
+            type="range"
+            min="0"
+            max="2"
+            value="1"
+            step="0.1"
+            id="pitch"
+          />
+        </footer>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

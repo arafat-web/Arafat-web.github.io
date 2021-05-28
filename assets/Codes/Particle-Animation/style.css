@@ -1,0 +1,8 @@
+body,
+html {
+  margin: 0 auto;
+background: white;
+}
+canvas {
+  opacity: 1;
+}

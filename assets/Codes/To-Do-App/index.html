@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <section id="form">
+        <div class="container">
+          <form class="login-form">
+            <div class="login-form-title m-b-50">
+              <h1 id="form-header">
+                Hello There!<br />
+                Before using this you need to create an account.
+              </h1>
+            </div>
+            <div id="username" class="input-container">
+              <i class="fa fa-user icon"></i>
+              <input
+                class="input-field"
+                type="text"
+                placeholder="Username"
+                id="usrnm"
+                name="usrnm"
+                required
+              />
+            </div>
+
+            <div id="email" class="input-container">
+              <i class="fa fa-envelope icon"></i>
+              <input
+                class="input-field"
+                type="text"
+                placeholder="Email"
+                id="mail"
+                name="email"
+                required
+              />
+            </div>
+
+            <div id="password" class="input-container">
+              <i class="fa fa-key icon"></i>
+              <input
+                class="input-field"
+                type="password"
+                placeholder="Password"
+                id="psw"
+                name="psw"
+                required
+              />
+            </div>
+            <div class="btns">
+              <button id="create-btn" type="submit" class="btn">Create</button>
+              <button id="login-btn" type="submit" class="btn">Login</button>
+            </div>
+            <div id="signin">
+              <p>
+                Already have an account? <a id="login-link" href="#">Login</a>.
+              </p>
+            </div>
+            <div id="signup">
+              <p>
+                New here? <a id="create-link" href="#">Create an Account</a>.
+              </p>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section id="profile">
+        <section id="main-header">
+          <div class="login-form-title m-b-10">
+            <h2>Welcome, <span id="logname">user</span></h2>
+            <div class="time-date">
+              <span id="date">date</span>
+              <span id="month">month</span>
+              <span id="year">year</span><br />
+              <span id="weekday">weekday</span>
+            </div>
+            <div class="logout">
+              <button onclick="Logout()" id="logout-btn" class="btn">
+                Logout
+              </button>
+            </div>
+          </div>
+        </section>
+        <section id="todo-area">
+          <div class="container">
+            <input
+              type="text"
+              id="todos"
+              class="input-field"
+              placeholder="Example: Coding at 12.00 AM"
+            />
+            <div class="add-btn">
+              <button id="todoadd-btn" class="btn">Add</button>
+            </div>
+          </div>
+        </section>
+        <div class="container todo-container" id="todo-container"></div>
+      </section>
+    </main>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCpQW3dkjGxqTPGhXcvRCQ__4UViQBDq28",
+        authDomain: "to-do-app-5b1c1.firebaseapp.com",
+        databaseURL: "https://to-do-app-5b1c1.firebaseio.com",
+        projectId: "to-do-app-5b1c1",
+        storageBucket: "to-do-app-5b1c1.appspot.com",
+        messagingSenderId: "756757679800",
+        appId: "1:756757679800:web:0e2789899a508626fa2e4d",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+      const fs = firebase.firestore();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

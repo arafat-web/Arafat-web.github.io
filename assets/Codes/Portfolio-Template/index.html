@@ -1,0 +1,651 @@
+<!--
+    Creation Date: 14/07/2020
+    Finishing Date: 21/07/2020
+    Author: Arafat Hossain Ar
+    Project Name: Resposive portfolio website.
+ 
+
+-->
+<!--
+    Hi good peoples! Hopefully you all are safe and fine.
+    This is my first responsive website using Bootstrap.
+    In last 10 days I was totally busy with Bootstrap,
+    thought it will be easy but it wasn't easy.
+    Anyways this website took almost 7 days to complete.
+    Hopefully you guys will love it.
+    Don't fortget to share your thoughts about this website.
+    Thank you for watching. :)
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta tags and title -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="author" content="Arafat Hossain Ar" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio Design - Arafat Hossain Ar</title>
+
+    <!-- bootstrap, fontawesome and jqeury cdn import -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- link to css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!--Owl carousel css-->
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+   <!-- Animation Css-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+
+<!-- body start here -->
+
+<body>
+    <!--loader start-->
+    <!-- <div class="loader_bg">
+        <div class="loader"></div>
+    </div> -->
+    <!-- navbar start here -->
+    <div class="navbar navbar-expand-md fixed-top">
+        <a href="#home" class="navbar-brand">Natasha</a>
+        <button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"  aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- <span class="navbar-toggler-icon"> <i class="fa fa-bars"></i> <i style="display: none;" class="fa fa-times"></i> </span>-->
+            <div class="nav-container" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#timeline">Timeline</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallery">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#reviews">Reviews</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- navbar end here -->
+
+    <!--slider area starts-->
+    <div id="home"></div>
+    <div class="banner-area" id="slider-area">
+        <div id="particles-js"></div>
+        <div class="banner-table">
+            <div class="banner-table-cell">
+                <div class="welcome-text">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2>Natasha Hossain</h2>
+                                <div class="text-affect"></div>
+                                <p class="banner-btn"><a href="#contact">Contact Now</a></p>
+                                <div class="socials">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="mouse-icon hidden-sm hidden-xs">
+                                    <div class="wheel"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--slider area ends-->
+
+    <!-- about start here -->
+    <div class="about-area" id="about">
+        <h2 class="text-center">About</h2>
+        <hr class="line1">
+        <hr class="line2">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-5 col-xl-5">
+                    <div class="about-left" data-aos="fade-down-left" data-aos-duration="1500">
+                        <img class="img-fluid img-thumbnail " src="photo/photo1.jpg" />
+                    </div>
+                </div>
+                <div class="col-xl-7 col-sm-12 col-md-7">
+                    <div class="about-right " data-aos="fade-down-right" data-aos-duration="1500">
+                        <h1>Hi! I'm <span class="text-info">Natasha Hossain</span>. I’m a web designer & Developer</h1>
+                        <p>
+                            “I’m a web designer & Developer. That means I make websites both
+                            beautiful and easy to use—I can make a lot of amorphous content look clean and easy to
+                            understand. I also take a lot of pleasure in coding mine and other people’s designs to make
+                            them work online.”
+                        </p>
+                        <div class="socials">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- about start here -->
+
+    <!-- timeline start here -->
+    <div class="timeline-area" id="timeline">
+        <h2 class="text-center">Timeline</h2>
+        <hr class="line1">
+        <hr class="line2">
+        <div class="container">
+            <h4 class="text-center" style="font-family: 'Bebas Neue', cursive;">Education</h4>
+            <hr class="line2">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="main-timeline">
+                        <div class="timeline" data-aos="fade-up-left" data-aos-duration="1500">
+                            <div class="timeline-icon"><span class="year">2018</span></div>
+                            <div class="timeline-content">
+                                <h3 class="title">BSC IN COMPUTER SCIENCE</h3>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Enim nunc faucibus a pellentesque sit
+                                    amet porttitor eget dolor. Blandit libero volutpat sed cras ornare arcu dui vivamus
+                                    arcu.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline" data-aos="fade-up-right" data-aos-duration="2000">
+                            <div class="timeline-icon"><span class="year">2017</span></div>
+                            <div class="timeline-content">
+                                <h3 class="title">BSC IN COMPUTER SCIENCE</h3>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Enim nunc faucibus a pellentesque sit
+                                    amet porttitor eget dolor. Blandit libero volutpat sed cras ornare arcu dui vivamus
+                                    arcu.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline " data-aos="fade-up-left" data-aos-duration="1500">
+                            <div class="timeline-icon"><span class="year">2016</span></div>
+                            <div class="timeline-content">
+                                <h3 class="title">BSC IN COMPUTER SCIENCE</h3>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Enim nunc faucibus a pellentesque sit
+                                    amet porttitor eget dolor. Blandit libero volutpat sed cras ornare arcu dui vivamus
+                                    arcu.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline" data-aos="fade-up-right" data-aos-duration="2000">
+                            <div class="timeline-icon"><span class="year">2015</span></div>
+                            <div class="timeline-content">
+                                <h3 class="title">BSC IN COMPUTER SCIENCE</h3>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Enim nunc faucibus a pellentesque sit
+                                    amet porttitor eget dolor. Blandit libero volutpat sed cras ornare arcu dui vivamus
+                                    arcu.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container ">
+            <h4 class="text-center skill-title" style="font-family: 'Bebas Neue', cursive;">Skills</h4>
+            <hr class="line2">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-xl-12">
+                    <div class="skillbar clearfix " data-aos="fade-up" data-aos-duration="2000" data-percent="99%">
+                        <div class="skillbar-title" style="background: #88cd2a;"><span>HTML5</span></div>
+                        <div class="skillbar-bar" style="background: #88cd2a;"></div>
+                        <div class="skill-bar-percent">99%</div>
+                    </div>
+                    <div class="skillbar clearfix " data-aos="fade-bottom" data-aos-duration="2000" data-percent="95%">
+                        <div class="skillbar-title" style="background: #f7a53b;"><span>CSS3</span></div>
+                        <div class="skillbar-bar" style="background: #f7a53b;"></div>
+                        <div class="skill-bar-percent">95%</div>
+                    </div>
+                    <div class="skillbar clearfix " data-aos="fade-down" data-aos-duration="2000" data-percent="80%">
+                        <div class="skillbar-title" style="background: #6adcfa;"><span>Javascript</span></div>
+                        <div class="skillbar-bar" style="background: #6adcfa;"></div>
+                        <div class="skill-bar-percent">80%</div>
+                    </div>
+                    <div class="skillbar clearfix " data-aos="fade-top" data-aos-duration="2000" data-percent="95%">
+                        <div class="skillbar-title" style="background: #fa6e6e;"><span>Java</span></div>
+                        <div class="skillbar-bar" style="background: #fa6e6e;"></div>
+                        <div class="skill-bar-percent">95%</div>
+                    </div>
+
+                    <div class="skillbar clearfix " data-aos="fade-up-right" data-aos-duration="2000"
+                        data-percent="90%">
+                        <div class="skillbar-title" style="background: #336699;"><span>MySQL</span></div>
+                        <div class="skillbar-bar" style="background: #336699;"></div>
+                        <div class="skill-bar-percent">90%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- timeline end here -->
+
+    <!-- services start here -->
+    <div class="services-area" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-center">Services</h2>
+                    <hr class="line1">
+                    <hr class="line2">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="single-services text-center" data-aos="fade-up" data-aos-duration="2000">
+                        <div class="services-icon">
+                            <i class="fa fa-superpowers"></i>
+                        </div>
+                        <div class="services-content">
+                            <h3>UI/UX Design</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Eget mauris pharetra et ultrices neque ornare aenean
+                                euismod elementum..</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="single-services text-center " data-aos="fade-down" data-aos-duration="2000">
+                        <div class="services-icon">
+                            <i class="fa fa-bar-chart"></i>
+                        </div>
+                        <div class="services-content">
+                            <h3>Web Design</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Eget mauris pharetra et ultrices neque ornare aenean
+                                euismod elementum.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="single-services text-center" data-aos="fade-top" data-aos-duration="2000">
+                        <div class="services-icon">
+                            <i class="fa fa-bell-o"></i>
+                        </div>
+                        <div class="services-content">
+                            <h3>Web Development</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Eget mauris pharetra et ultrices neque ornare aenean
+                                euismod elementum.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="single-services text-center" data-aos="fade-bottom" data-aos-duration="2000">
+                        <div class="services-icon">
+                            <i class="fa fa-area-chart"></i>
+                        </div>
+                        <div class="services-content">
+                            <h3>SEO Marketing</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Eget mauris pharetra et ultrices neque ornare aenean
+                                euismod elementum.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="single-services text-center" data-aos="fade-up-left" data-aos-duration="2000">
+                        <div class="services-icon">
+                            <i class="fa fa-desktop"></i>
+                        </div>
+                        <div class="services-content">
+                            <h3>Desktop Application</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Eget mauris pharetra et ultrices neque ornare aenean
+                                euismod elementum.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="single-services text-center" data-aos="fade-down-left" data-aos-duration="2000">
+                        <div class="services-icon">
+                            <i class="fa fa-mobile-phone"></i>
+                        </div>
+                        <div class="services-content">
+                            <h3>Android Application</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Eget mauris pharetra et ultrices neque ornare aenean
+                                euismod elementum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- services start here -->
+
+    <!-- gallery start here -->
+    <div class="gallery-area" id="gallery">
+        <h2 class="text-center">Gallery</h2>
+        <hr class="line1">
+        <hr class="line2">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4" data-aos="fade-down-left" data-aos-duration="1500">
+                    <div class="project-items">
+                        <a class="view img"
+                            href="photo/1 (1).jpg">
+                            <img src="photo/1 (1).jpg" alt="">
+                        </a>
+                        <div class="project-text">
+                            <h2>Website Design</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4" data-aos="fade-up-left" data-aos-duration="1500">
+                    <div class="project-items">
+                        <a class="view img"
+                            href="photo/1 (2).jpg">
+                            <img src="photo/1 (2).jpg" alt="">
+                        </a>
+                        <div class="project-text">
+                            <h2>Website Design</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4" data-aos="fade-down-right" data-aos-duration="1500">
+                    <div class="project-items">
+                        <a class="view img"
+                            href="photo/1 (3).jpg">
+                            <img src="photo/1 (3).jpg" alt="">
+                        </a>
+                        <div class="project-text">
+                            <h2>Website Design</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4" data-aos="fade-down-right" data-aos-duration="1500">
+                    <div class="project-items">
+                        <a class="view img"
+                            href="photo/1 (4).jpg">
+                            <img src="photo/1 (4).jpg" alt="">
+                        </a>
+                        <div class="project-text">
+                            <h2>Website Design</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4" data-aos="fade-down-right" data-aos-duration="1500">
+                    <div class="project-items">
+                        <a class="view img"
+                            href="photo/1 (5).jpg">
+                            <img src="photo/1 (5).jpg" alt="">
+                        </a>
+                        <div class="project-text">
+                            <h2>Website Design</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4" data-aos="fade-down-right" data-aos-duration="1500">
+                    <div class="project-items">
+                        <a class="view img"
+                            href="photo/1 (6).jpg">
+                            <img src="photo/1 (6).jpg" alt="">
+                        </a>
+                        <div class="project-text">
+                            <h2>Website Design</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- gallery end here -->
+
+    <!-- reviews start here -->
+    <div id="reviews" class="review-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-center">Buyer's Reviews</h2>
+                    <hr class="line1">
+                    <hr class="line2">
+                </div>
+            </div>
+            <div class="row" data-aos="fade-down-right" data-aos-duration="1500">
+                <div class="col-xs-12 col-md-12 col-md-offset-2">
+                    <div id="review-slider" class="owl-carousel">
+                        <div class="single-review">
+                            <div class="review-content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. A diam maecenas sed enim. Sagittis orci
+                                    a scelerisque purus semper eget duis.</p>
+                            </div>
+                            <div class="pic">
+                                <img src="photo/BlankPerson.png" alt="testimonial image">
+                            </div>
+                            <div class="review-title">
+                                <h3>Mike Reacher</h3>
+                                <small>Web Developer</small>
+                            </div>
+                        </div>
+
+                        <div class="single-review">
+                            <div class="review-content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. A diam maecenas sed enim. Sagittis orci
+                                    a scelerisque purus semper eget duis.</p>
+                            </div>
+                            <div class="pic">
+                                <img src="photo/BlankPerson.png" alt="testimonial image">
+                            </div>
+                            <div class="review-title">
+                                <h3>Anika Doe</h3>
+                                <small>Web Designer</small>
+                            </div>
+                        </div>
+                        <div class="single-review">
+                            <div class="review-content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. A diam maecenas sed enim. Sagittis orci
+                                    a scelerisque purus semper eget duis.</p>
+                            </div>
+                            <div class="pic">
+                                <img src="photo/BlankPerson.png">
+                            </div>
+                            <div class="review-title">
+                                <h3>Arafat Hossain</h3>
+                                <small>Desktop App Developer</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="invitation-area" data-aos="fade-down-right" data-aos-duration="1500">
+            <div class="container">
+                <div class="row">
+                    <div class="single-invite text-center">
+                        <h2>do you have any project need to be done?</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Vulputate sapien nec sagittis aliquam malesuada bibendum.
+                            Scelerisque varius morbi enim nunc faucibus a pellentesque sit amet.?</p>
+                        <a href="#contact" class="my-btn-3">Get started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- review end here -->
+
+    <!-- contact start here -->
+    <div id="contact" class="contact-area">
+        <div class="container">
+            <h2 class="text-center">Contact</h2>
+            <hr class="line1">
+            <hr class="line2">
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                    <div class="top-contact">
+                        <div class="row">
+                            <div class="col-sm-4 col-md-4">
+                                <div class="top-contact-text " data-aos="fade-up-right" data-aos-duration="1500">
+                                    <div class="contact-icon">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-map-marker"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <h2>Address / Street</h2>
+                                    <p>1200, Dhaka, Bangladesh</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-md-4">
+                                <div class="top-contact-text" data-aos="fade-down-left" data-aos-duration="1500">
+                                    <div class="contact-icon">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-phone"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <h2>Contact Number</h2>
+                                    <p>+880 - 1xx - xxxxxx</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-md-4">
+                                <div class="top-contact-text" data-aos="fade-up-right" data-aos-duration="1500">
+                                    <div class="contact-icon">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-globe"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <h2>Website Address</h2>
+                                    <p>www.arafat.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box-contact-form">
+                    <form id="contact-form" method="post" action="contact.php">
+                        <div class="messages"></div>
+                        <div class="controls">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input id="form_name" type="text" name="name" class="form-control"
+                                            placeholder="Enter your full name *" required="required"
+                                            data-error="Fullname is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input id="form_email" type="email" name="email" class="form-control"
+                                            placeholder="Enter your email *" required="required"
+                                            data-error="Valid email is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea id="form_message" name="message" class="form-control"
+                                            placeholder="Your Message *" rows="4" required="required"
+                                            data-error="Leave a message for me"></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <button class="btn btn-send" value="">Send message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact end here -->
+
+    <div class="footer-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xl-12">
+                    <p class="text-center text-white">&copy; All Right Reserved by <a class="text-success"
+                            href="">Arafat Hossain Ar</a>
+                    </p>
+                    <hr style="border-top: 2px solid wheat; width: 80%; margin: auto;">
+                    <div class="footer-social">
+                        <ul align="center">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Javascript resources-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <!--particle js-->
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+    <!--Owl Carousel js-->
+    <script src="js/owl.carousel.js"></script>
+    <!--Typed js-->
+    <script src="js/script.js"></script>
+    <!--Validator js-->
+    <script src="js/typed.js"></script>
+    <script src="js/validator.js"></script>
+    <!--Magnific popup js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+    <script>
+        AOS.init();
+        
+    function myFunction(x) {
+        x.classList.toggle("change");
+      }
+    </script>
+</body>
+<!-- body end here -->
+
+</html>

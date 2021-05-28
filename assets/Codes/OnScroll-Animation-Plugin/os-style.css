@@ -1,0 +1,62 @@
+/* Left to Right Animation  */
+.from-left {
+  animation: to-right 2s;
+}
+@keyframes to-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* Right to Left Animation  */
+.from-right {
+  animation: to-left 2s;
+}
+
+@keyframes  to-left{
+  0% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Bottom to Top  */
+.from-bottom{
+    animation: to-top 2s;
+}
+@keyframes to-top {
+    0% {
+        opacity: 0;
+        transform: translateY(300px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+}
+
+/* Top to Bottom  */
+.from-top{
+    animation: to-bottom 2s;
+}
+@keyframes to-bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-300px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+}
