@@ -8,7 +8,6 @@
   "use strict";  
 
   $(window).on('load', function() {
-
     /* 
    MixitUp
    ========================================================================== */
@@ -50,7 +49,6 @@
       /* WOW Scroll Spy
     ========================================================*/
      var wow = new WOW({
-      //disabled for mobile
         mobile: true
     });
 
@@ -91,8 +89,6 @@
         return false;
       });
 
-
-
   });      
 
 }(jQuery));
@@ -103,7 +99,7 @@ $(document).ready(function () {
 
   setTimeout(function () {
       $('.loader_bg').fadeToggle();
-  }, 2000);
+  }, 3000);
 
   //jQuery for page scrolling feature - requires jQuery Easing plugin
   $(function () {
