@@ -277,27 +277,7 @@ a.back-to-top:focus {
   text-decoration: none;
 }
 
-#loader {
-  position: fixed;
-  background: #fff;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9999999999;
-}
 
-.square-spin {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -40px;
-  margin-top: -40px;
-}
-
-.square-spin img {
-  max-width: 64px;
-}
 
 .section-padding {
   padding: 60px 0;
@@ -464,6 +444,7 @@ a.back-to-top:focus {
 
 .navbar .nav-link{
   color: #fff !important;
+  font-size: 15px;
 }
 
 .top-nav-collapse .navbar-nav .nav-link {
@@ -486,27 +467,11 @@ a.back-to-top:focus {
 .navbar-nav li.active a.nav-link {
   color: #00b4d9 !important;
 }
-.indigo {
-  
-  background: transparent;
-}
 
 .menu-bg {
   background: transparent;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link i {
-  font-size: 28px;
-  color: #00b4d9;
-  vertical-align: middle;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.navbar-expand-lg .navbar-nav .nav-link i:hover {
-  color: #21cff3;
-}
 
 .navbar-expand-lg .navbar-nav .nav-link {
   color: #333;
@@ -827,7 +792,7 @@ a.back-to-top:focus {
   opacity: 0.7;
 }
 .left-area p{
-  font-size: 20px;
+  font-size: 17px;
   padding-bottom: 10px;
 }
 .left-area .email{
@@ -852,6 +817,10 @@ a.back-to-top:focus {
 .contact-btn{
   background-color: #00b4d9;
   padding: 10px !important;
+  color: #fff !important;
+}
+.contact-btn:hover{
+  opacity: 0.7;
 }
 .contact-form-area h2 {
   font-size: 18px;
@@ -921,10 +890,7 @@ a.back-to-top:focus {
   margin-top: 10px;
   border: 1px dashed #00b4d9;
 }
-/*
-  Author: Arafat Hossain Ar
-  Date: 07 - 01 - 2021
-*/
+/* //////////////////////////////////////// */
 
 .loader_bg {
   position: fixed;
@@ -1246,7 +1212,6 @@ a.back-to-top:focus {
   width: 300px;
   height: 300px;
   perspective: 1000px;
-  margin: 20px;
   
 }
 
