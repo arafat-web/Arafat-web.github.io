@@ -3,6 +3,8 @@
   Date: 07 - 01 - 2021
 */
 @import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light|Source+Sans+Pro:400,700");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
 html {
   overflow-x: hidden;
 }
@@ -604,7 +606,7 @@ a.back-to-top:focus {
 3. Hero Area
 ========================================================================== */
 .hero-area-bg {
-  background: url(../img/background/bg_hero.svg) no-repeat;
+  background: url(../img/bg_hero.svg) no-repeat;
   background-size: cover;
   height: 100%;
 }
@@ -695,22 +697,25 @@ a.back-to-top:focus {
 }
 
 #portfolios .mix {
-  padding: 10px;
+  padding: 20px;
 }
 
-#portfolios .portfolio-item .shot-item {
+/* #portfolios .portfolio-item .shot-item {
   margin: 0px;
-}
+} */
 
 #portfolio .mix {
   display: none;
+
 }
 
 .controls {
   text-align: center;
   padding: 0px 0px 20px;
 }
-
+.controls .btn-common{
+  color: #fff !important;
+}
 .controls .active {
   color: #00b4d9 !important;
   border-color: #00b4d9;
@@ -723,11 +728,12 @@ a.back-to-top:focus {
   color: #fff;
 }
 
+
 .controls:hover {
   cursor: pointer;
 }
 
-.portfolio-img {
+/* .portfolio-img {
   overflow: hidden;
   display: block;
   position: relative;
@@ -815,7 +821,7 @@ a:not([href]):not([tabindex]) {
 a:not([href]):not([tabindex]):focus,
 a:not([href]):not([tabindex]):hover {
   color: #fff;
-}
+} */
 
 /* Services Item */
 .services {
@@ -1012,7 +1018,7 @@ a:not([href]):not([tabindex]):hover {
   Author: Arafat Hossain Ar
   Date: 07 - 01 - 2021
 */
-@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+
 .loader_bg {
   position: fixed;
   z-index: 9999999;
@@ -1303,3 +1309,127 @@ a:not([href]):not([tabindex]):hover {
   bottom: 10px;
 }
 
+
+
+
+/* ////////////////////////////////////// */
+.gallery {
+  position: relative;
+  margin: 0 auto;
+  padding: 0%;
+  text-align: center;
+}
+
+.gallery__item {
+  background: transparent;
+  display: inline-block;
+}
+.gallery__item img{
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+}
+.is-hidden {
+  display: none;
+  margin: 0 auto;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  margin: 20px;
+  
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #282828;
+  color: white;
+  transform: rotateY(180deg);
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+.flip-card-back .details {
+  position: relative;
+  top: 70px;
+  font-family: "Quantico", sans-serif;
+}
+
+.flip-card-back .linking {
+  display: inline-block;
+}
+
+.flip-card-back .linking a {
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  width: 90px;
+  display: inline-block;
+  font-size: 20px;
+  background-color: #161616;
+  margin: 10px;
+  text-align: center;
+  border-radius: 5px;
+  font-family: "Quantico", sans-serif;
+}
+
+.flip-card-back .linking a:hover {
+  opacity: 0.7;
+}
+
+.top-right {
+  position: absolute;
+  top: 4px;
+  right: -34px;
+  display: inline-block;
+  width: 150px;
+  color: white;
+  transform: rotate(40deg);
+  border-top: 0px solid transparent;
+  border-bottom: 25px solid #00b4d9;
+  border-left: 30px solid transparent;
+  border-right: 21px solid transparent;
+  transition: 0.6s all;
+}
+
+.top-right .text {
+  font-family: "Quantico", sans-serif;
+  position: relative;
+  top: 23px;
+}
+
+.flip-card:hover .top-right {
+  border-bottom: 25px solid transparent;
+  transition: 0.6s all;
+}
