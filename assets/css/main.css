@@ -985,6 +985,7 @@ a:not([href]):not([tabindex]):hover {
   font-size: 17px;
   margin-top: 20px;
   color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .footer-area .footer-text p a {
@@ -1004,7 +1005,6 @@ a:not([href]):not([tabindex]):hover {
   padding: 10px 20px;
 }
 .footer-area hr{
-  width: ;
   margin-top: 10px;
   border: 1px dashed #00b4d9;
 }
