@@ -1,7 +1,14 @@
 
 (function() {
   "use strict";
+  // let myVar;
 
+    setTimeout(showPage, 3000);
+  
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("wrapper").style.display = "block";
+  }
   /**
    * Easy selector helper function
    */
