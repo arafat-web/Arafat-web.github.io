@@ -4,10 +4,10 @@
   /**
    * Loader Control
    */
-  setTimeout(showPage, 3000);
+  setTimeout(showPage, 5000);
   function showPage() {
-    document.getElementById("loader").style.display = "none";
-    document.getElementById("wrapper").style.display = "block";
+    document.getElementById("loader").style.visibility = "hidden";
+    document.getElementById("wrapper").style.visibility = "visible";
   }
   /**
    * Easy selector helper function
