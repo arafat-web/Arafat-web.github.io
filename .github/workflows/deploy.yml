@@ -1,0 +1,27 @@
+name: Deploy Static Website to cPanel
+
+on:
+  push:
+    branches:
+      - main  
+  pull_request:
+    branches:
+      - main  
+
+jobs:
+  deploy-to-cpanel:
+    name: 🎉 Deploy Website
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🚚 Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1 
+
+      - name: 📂 Sync HTML/CSS to the server
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
