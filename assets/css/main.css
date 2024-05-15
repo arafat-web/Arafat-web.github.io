@@ -469,6 +469,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  scroll-behavior: smooth !important;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -573,6 +574,74 @@ img[width],
 img[height] {
   max-width: none;
 }
+.card {
+  text-align: center;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: #292a2a; 
+  color: #f5f5f5; 
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.7);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #a4a5a6 !important;
+}
+
+.card-text {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: #979899 !important;
+}
+
+.card-tags .tag {
+  display: inline-block;
+  background: #333; 
+  color: #979899;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.card-links{
+  display: flex;
+
+}
+.card-links a.card-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48%;
+  margin: 10px 1%;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #bdbdbd;
+  background: #333;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.card-links a.card-link:hover {
+  background: #555;
+  transform: translateY(-3px);
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+
 
 .o-list-bare,
 .c-social-buttons,
