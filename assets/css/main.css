@@ -574,6 +574,9 @@ img[width],
 img[height] {
   max-width: none;
 }
+.text-uppercase{
+  text-transform: uppercase !important;
+}
 .card {
   text-align: center;
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -639,6 +642,90 @@ img[height] {
 
 .icon {
   margin-right: 5px;
+}
+
+
+.blog-card {
+  background-color: #222; /* Dark background */
+  color: #fff; /* Light text for readability */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subdued shadow */
+  margin-bottom: 20px;
+  border-radius: 5px; /* Rounded corners */
+  padding: 20px;
+  display: flex; /* Allow for content and sidebar layout */
+  flex-direction: column; /* Stack elements vertically */
+  position: relative; /* For before and after elements */
+  overflow: hidden; /* Contain background animation */
+}
+
+.blog-card::before,
+.blog-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, transparent, #444, transparent); /* Diagonal gradient */
+  animation: animateBackground 5s ease-in-out infinite; /* Background animation */
+  z-index: -1; /* Behind content */
+}
+
+.blog-card::after {
+  animation-delay: 2s; /* Offset second animation */
+}
+
+@keyframes animateBackground {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.blog-card-header {
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+  padding-bottom: 5px; 
+}
+
+.blog-card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fff; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.blog-card-info {
+  font-style: italic;
+  color: #ccc; 
+}
+
+.blog-card-content {
+  flex-grow: 1; 
+  text-align: justify; 
+  color: #ddd; 
+}
+
+.blog-card-footer {
+  text-align: right; 
+  margin-top: 10px;
+}
+
+.blog-btn {
+  background-color: #f0aa00; 
+  color: #222; 
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; 
+}
+
+.blog-btn:hover {
+  background-color: #e69300; 
 }
 
 
