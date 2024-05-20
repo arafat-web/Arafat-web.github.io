@@ -65,14 +65,15 @@
     <!-- dense.js (Retina plugin) -->
     <script src="../../assets/js/dense.js"></script>
 
-    <!-- Nivo Lightbox -->
-    <script src="../../assets/plugins/nivo-lightbox/nivo-lightbox.min.js"></script>
 
     <!-- ScrollReveal -->
     <script src="../../assets/js/scrollreveal.min.js"></script>
 
     <!-- Main JS -->
     <script src="../../assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars/dist/handlebars.min.js"></script>
+
+
 </head>
 
 <body>
@@ -160,58 +161,10 @@
 
         <section class="o-section  t-section  ">
 
-            <div class="o-section__header-bg  t-section__header"></div>
-            <div class="o-section__content-bg  t-section__content"></div>
+            <!-- <div class="o-section__header-bg  t-section__header"></div>
+            <div class="o-section__content-bg  t-section__content"></div> -->
+            <div id="blog-container"></div>
 
-            <div class="o-container">
-                <div class="o-section__container">
-
-                    <header class="o-section__header  t-section__header">
-                        <div class="o-content">
-                            <h2 class="o-section__heading">
-                                Programming
-                            </h2>
-                            <div class="o-content__body  o-section__description">
-                                Here it gets interesting.
-                            </div>
-                        </div>
-                    </header><!-- /o-section__header -->
-
-                    <div class="o-section__content  t-section__content  o-section__full-bottom-space">
-                        <div class="o-grid  o-grid--gallery">
-                            <div class="o-grid__col-sm-12">
-                                <article class="blog-card">
-                                    <header class="blog-card-header">
-                                        <h2 class="blog-card-title">Bridging the Gap: The Power of Full-Stack Web
-                                            Development</h2>
-                                        <p class="blog-card-info">
-                                            <span class="author">By: Arafat Hossain Ar</span>
-                                            <span class="date"> - May 17, 2024</span>
-                                        </p>
-                                    </header>
-                                    <div class="blog-card-content">
-                                        <p>
-                                            The digital landscape is constantly evolving, demanding websites that are
-                                            not only visually appealing but also functionally robust. This is where
-                                            full-stack developers come in. As a skilled full-stack developer myself, I
-                                            bridge the gap between front-end and back-end development, crafting
-                                            exceptional web solutions that cater to both user experience and
-                                            functionality.
-                                        </p>
-                                    </div>
-                                    <footer class="blog-card-footer">
-                                        <a href="bridging-the-gap-the-power-of-full-stack-web-development/"
-                                            class="blog-btn">Read More</a>
-                                    </footer>
-                                </article>
-                            </div><!-- /o-grid__col -->
-                        </div>
-                        <!-- /o-grid -->
-
-                    </div><!-- /o-section__content -->
-
-                </div><!-- /o-section__container -->
-            </div><!-- /o-container -->
 
         </section>
         <!-- /o-section -->
@@ -357,6 +310,69 @@
 
 
     </div><!-- /c-main-container -->
+    <script id="category-template" type="text/x-handlebars-template">
+        {{#each categories}}
+        <section class="o-section  t-section  ">
+    
+            <div class="o-section__header-bg  t-section__header"></div>
+            <div class="o-section__content-bg  t-section__content"></div>
+    
+            <div class="o-container">
+                <div class="o-section__container">
+    
+                    <header class="o-section__header  t-section__header">
+                        <div class="o-content">
+                            <h2 class="o-section__heading">{{name}}</h2>
+                        </div>
+                    </header>
+    
+                    <div class="o-section__content  t-section__content  o-section__full-bottom-space">
+                        <div class="o-grid  o-grid--gallery">
+                            {{#each posts}}
+                            <div class="o-grid__col-sm-12">
+                                <article class="blog-card">
+                                    <header class="blog-card-header">
+                                        <h2 class="blog-card-title">{{title}}</h2>
+                                        <p class="blog-card-info">
+                                            <span class="author">By: {{author}}</span>
+                                            <span class="date"> - {{date}}</span>
+                                        </p>
+                                    </header>
+                                    <div class="blog-card-content">
+                                        <p>{{description}}</p>
+                                    </div>
+                                    <footer class="blog-card-footer">
+                                        <a href="/blog/{{slug}}" class="blog-btn">Read More</a>
+                                    </footer>
+                                </article>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </section>
+        {{/each}}
+    </script>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('http://localhost/blog-api-orchid/public/api/categories')  // Replace 'API_URL' with the actual URL of your API
+                .then(response => response.json())
+                .then(data => {
+                    const templateSource = document.getElementById('category-template').innerHTML;
+                    const template = Handlebars.compile(templateSource);
+                    const compiledHtml = template(data);
+                    document.getElementById('blog-container').innerHTML = compiledHtml;
+                })
+                .catch(error => console.error('Error loading the blog posts:', error));
+        });
+    </script>
+
+
 
 </body>
 
