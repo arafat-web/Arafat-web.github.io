@@ -498,6 +498,41 @@ body {
   background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
 }
 
+/* Responsive section titles */
+.mobile-title {
+  display: none;
+}
+
+.desktop-title {
+  display: inline;
+}
+
+/* Show mobile title on small screens */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .mobile-title {
+    display: inline;
+  }
+  
+  .desktop-title {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
