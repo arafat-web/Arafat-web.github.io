@@ -1437,10 +1437,25 @@ body {
     font-size: 1.4rem;
   }
 
-  .logo::before,
-  .logo::after {
-    display: none;
-  }
+.logo::before {
+  content: '<';
+  position: absolute;
+  left: -15px;
+  animation: blink 2s infinite;
+}
+
+.logo::after {
+  content: '/>';
+  position: absolute;
+  right: -30px;
+  animation: blink 2s infinite reverse;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0.3; }
+}
+
 
   .mobile-menu-btn {
     font-size: 1.3rem;
