@@ -203,6 +203,7 @@ body {
   .nav-link:hover {
     background: rgba(0, 255, 255, 0.1);
     border-radius: 5px;
+    padding: 0.5rem 1rem;
     color: var(--neon-cyan);
     text-shadow: var(--accent-glow) var(--neon-cyan);
   }
