@@ -118,6 +118,9 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -165,6 +168,48 @@ body {
   z-index: 999;
   list-style: none;
   margin: 0;
+}
+
+/* Desktop Navigation - Show horizontal menu on larger screens */
+@media (min-width: 1025px) {
+  .nav-menu {
+    display: flex !important;
+    position: static;
+    width: auto;
+    background: none;
+    backdrop-filter: none;
+    flex-direction: row;
+    padding: 0;
+    gap: 2rem;
+    border: none;
+    box-shadow: none;
+    z-index: auto;
+  }
+  
+  .nav-menu li {
+    width: auto;
+  }
+  
+  .nav-link {
+    padding: 0.5rem 1rem;
+    border-bottom: none;
+    font-size: 1rem;
+    text-align: left;
+    width: auto;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    background: rgba(0, 255, 255, 0.1);
+    border-radius: 5px;
+    color: var(--neon-cyan);
+    text-shadow: var(--accent-glow) var(--neon-cyan);
+  }
+  
+  .mobile-menu-btn {
+    display: none !important;
+  }
 }
 
 /* Hero Section */
@@ -1285,6 +1330,12 @@ body {
   padding: 0.5rem;
   transition: all 0.3s ease;
   z-index: 1001;
+  position: relative;
+  min-width: 44px; /* Minimum touch target size */
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .mobile-menu-btn:hover {
@@ -1344,6 +1395,7 @@ body {
 @media (max-width: 480px) {
   .nav-container {
     padding: 0 1rem;
+    position: relative;
   }
 
   .logo {
@@ -1357,12 +1409,19 @@ body {
 
   .mobile-menu-btn {
     font-size: 1.3rem;
-    padding: 0.3rem;
+    padding: 0.4rem;
+    min-width: 40px;
+    min-height: 40px;
+    margin-right: 0;
+    flex-shrink: 0; /* Prevent shrinking */
   }
 
   .nav-menu {
     padding: 1.5rem !important;
     gap: 1rem !important;
+    left: 0;
+    right: 0;
+    width: 100%;
   }
 
   .nav-link {
@@ -1737,6 +1796,22 @@ body {
 
 /* Fix for very small screens */
 @media (max-width: 320px) {
+  .nav-container {
+    padding: 0 0.5rem;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+  }
+  
+  .mobile-menu-btn {
+    font-size: 1.2rem;
+    padding: 0.3rem;
+    min-width: 36px;
+    min-height: 36px;
+  }
+  
   .hero-title {
     font-size: clamp(1.5rem, 8vw, 2rem) !important;
     white-space: normal;
